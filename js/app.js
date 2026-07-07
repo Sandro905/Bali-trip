@@ -54,7 +54,6 @@
     <div class="wrap">
       <div class="hero">
         <h1>Bali <span class="accent">2026</span></h1>
-        <p>${esc(t().tagline)}</p>
         <div class="meta">
           <span class="chip">20 → 29 · 07 · 2026</span>
           <span class="chip">10 ${esc(t().days).toLowerCase()}</span>
@@ -74,6 +73,14 @@
               </div>
             </div>`).join("")}
         </div>
+      </div>
+
+      <div class="section">
+        <h2>${esc(t().mapTitle)}</h2>
+        <div class="mapembed">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1xaq9fMETXXZrfVFr09rTp8jbruWESsQ&ehbc=2E312F&noprof=1" loading="lazy" allowfullscreen title="${esc(t().mapTitle)}"></iframe>
+        </div>
+        <a class="maplink" href="https://www.google.com/maps/d/viewer?mid=1xaq9fMETXXZrfVFr09rTp8jbruWESsQ" target="_blank" rel="noopener">📍 ${esc(t().mapOpen)}</a>
       </div>
 
       <div class="section">
@@ -115,10 +122,7 @@
 
       <div class="section" style="text-align:center">
         <a class="btn" href="files/Itinerario_Bali_DETTAGLIATO.md" download>⬇️ ${esc(t().download)}</a>
-        <div class="smallnote">${esc(t().offline)}</div>
       </div>
-
-      <footer>🌴 · ${esc(t().photoHint)}</footer>
     </div>`;
   }
 
@@ -128,13 +132,19 @@
     const prev = DAYS.find((x) => x.num === n - 1);
     const next = DAYS.find((x) => x.num === n + 1);
 
+    // Check-out: leaving the previous hotel today (it differs from where we sleep tonight).
+    const checkout = prev && prev.hotel !== "—" && prev.hotel !== d.hotel ? prev.hotel : null;
+
     return `
     <div class="wrap">
       <div class="dayhero" style="${coverStyle(d)}">
         <div class="inner">
           <div class="kicker">${esc(d.date[lang])} · ${esc(d.area[lang])}</div>
           <h1>${d.emoji} ${lang === "zh" ? "第" + d.num + "天" : t().day + " " + d.num} — ${esc(d.title[lang])}</h1>
-          ${d.hotel !== "—" ? `<a class="stay" href="${d.hotelMap}" target="_blank" rel="noopener">🛏️ ${esc(t().stay)}: ${esc(d.hotel)}</a>` : ""}
+          <div class="stays">
+            ${checkout ? `<span class="stay checkout">🧳 ${esc(t().checkout)}: ${esc(checkout)}</span>` : ""}
+            ${d.hotel !== "—" ? `<a class="stay" href="${d.hotelMap}" target="_blank" rel="noopener">🛏️ ${esc(t().stay)}: ${esc(d.hotel)}</a>` : ""}
+          </div>
         </div>
       </div>
 
