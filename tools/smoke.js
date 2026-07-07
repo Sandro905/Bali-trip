@@ -35,7 +35,7 @@ global.localStorage = {
 
 // load data + app
 eval(fs.readFileSync(path.join(__dirname, "../js/data.js"), "utf8") + "\n" +
-     "global.__D = { UI, DAYS, PACKING, INFO, BOOKINGS, FLEX, CHAPTERS, FLIGHTS };");
+     "global.__D = { UI, DAYS, PACKING, INFO, BOOKINGS, BOOKING_CATS, FLEX, CHAPTERS };");
 const D = global.__D;
 Object.assign(global, D); // expose to app.js
 

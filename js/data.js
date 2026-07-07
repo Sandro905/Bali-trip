@@ -12,13 +12,13 @@ const UI = {
     download: "Scaricare l'itinerario completo (.md)",
     openMap: "Maps", timeline: "La giornata", notes: "Note", transport: "Trasporti del giorno",
     mapTitle: "La mappa del viaggio", mapOpen: "Aprire in Google Maps",
+    flightStatus: "Stato volo in tempo reale",
     stay: "Alloggio", checkout: "Check-out", planB: "Piano B",
     tips: "Consigli", when: "Quando", how: "Come", what: "Cosa",
     packingTitle: "Da mettere in valigia",
     bureaucracy: "Burocrazia d'arrivo (prima di partire)",
     health: "Salute & sicurezza",
     practical: "Note pratiche",
-    flights: "Voli",
     flex: "Flessibilità: se un giorno salta",
     flexNote: "Ogni giornata ha una sola cosa principale + relax: se ne salta una, si sposta l'ancora e non crolla niente.",
     recovery: "Recupero possibile",
@@ -37,13 +37,13 @@ const UI = {
     download: "Download the full itinerary (.md)",
     openMap: "Maps", timeline: "The day", notes: "Notes", transport: "Transport for the day",
     mapTitle: "The trip map", mapOpen: "Open in Google Maps",
+    flightStatus: "Live flight status",
     stay: "Stay", checkout: "Check-out", planB: "Plan B",
     tips: "Tips", when: "When", how: "How", what: "What",
     packingTitle: "Packing list",
     bureaucracy: "Arrival paperwork (before departure)",
     health: "Health & safety",
     practical: "Practical notes",
-    flights: "Flights",
     flex: "Flexibility: if a day falls through",
     flexNote: "Each day has one main anchor + downtime: if one is missed, the anchor moves and nothing collapses.",
     recovery: "Possible recovery",
@@ -62,13 +62,13 @@ const UI = {
     download: "下载完整行程 (.md)",
     openMap: "地图", timeline: "当日安排", notes: "备注", transport: "当日交通",
     mapTitle: "行程地图", mapOpen: "在Google Maps中打开",
+    flightStatus: "实时航班状态",
     stay: "住宿", checkout: "退房", planB: "备选方案",
     tips: "提示", when: "时间", how: "方式", what: "内容",
     packingTitle: "行李清单",
     bureaucracy: "入境手续（出发前办理）",
     health: "健康与安全",
     practical: "实用信息",
-    flights: "航班",
     flex: "灵活安排：若某天计划取消",
     flexNote: "每天只安排一项主要活动，其余为休闲：错过一项，顺延即可，行程不受影响。",
     recovery: "可补救方案",
@@ -79,27 +79,6 @@ const UI = {
     backHome: "全部行程",
     prevDay: "上一天", nextDay: "下一天",
   }
-};
-
-const FLIGHTS = {
-  it: [
-    ["Shenzhen → Kuala Lumpur", "20 lug · 02:45 · MH523"],
-    ["Kuala Lumpur → Bali", "20 lug · 09:00 · MH715"],
-    ["Bali → Kuala Lumpur", "29 lug · 16:25 · MH850"],
-    ["Kuala Lumpur → Shenzhen", "29 lug · 21:05 · MH522"],
-  ],
-  en: [
-    ["Shenzhen → Kuala Lumpur", "20 Jul · 02:45 · MH523"],
-    ["Kuala Lumpur → Bali", "20 Jul · 09:00 · MH715"],
-    ["Bali → Kuala Lumpur", "29 Jul · 16:25 · MH850"],
-    ["Kuala Lumpur → Shenzhen", "29 Jul · 21:05 · MH522"],
-  ],
-  zh: [
-    ["深圳 → 吉隆坡", "7月20日 · 02:45 · MH523"],
-    ["吉隆坡 → 巴厘岛", "7月20日 · 09:00 · MH715"],
-    ["巴厘岛 → 吉隆坡", "7月29日 · 16:25 · MH850"],
-    ["吉隆坡 → 深圳", "7月29日 · 21:05 · MH522"],
-  ]
 };
 
 const CHAPTERS = {
@@ -145,8 +124,16 @@ const DAYS = [
     zh: "红眼航班之后：全天在别墅周边度过，节奏极其舒缓。"
   },
   timeline: [
-    { t: "12:00", icon: "🛬", title: { it: "Atterraggio a Bali (DPS)", en: "Landing in Bali (DPS)", zh: "抵达巴厘岛 (DPS)" },
-      desc: { it: "Attivare subito la eSIM: serve per Grab e per il delivery del pranzo.", en: "Activate the eSIM right away: needed for Grab and lunch delivery.", zh: "立即激活eSIM：Grab打车和外卖都需要它。" } },
+    { t: "00:00", icon: "🛫", title: { it: "Aeroporto di Shenzhen (SZX · T3)", en: "Shenzhen Airport (SZX · T3)", zh: "深圳宝安机场 (SZX · T3)" },
+      desc: { it: "Arrivo in aeroporto e imbarco. Il check-in Malaysia Airlines chiude 60 min prima del volo: essere ai gate con margine.", en: "Arrive at the airport and board. Malaysia Airlines check-in closes 60 min before departure: be at the gate with a buffer.", zh: "抵达机场并办理登机。马航值机在起飞前60分钟关闭：请预留时间到达登机口。" } },
+    { t: "02:45", icon: "✈️", title: { it: "Volo MH523 · Shenzhen → Kuala Lumpur", en: "Flight MH523 · Shenzhen → Kuala Lumpur", zh: "航班 MH523 · 深圳 → 吉隆坡" },
+      desc: { it: "Boeing 737-8, ~4h. Arrivo a Kuala Lumpur (KUL) alle 06:45.", en: "Boeing 737-8, ~4h. Arrives Kuala Lumpur (KUL) at 06:45.", zh: "波音737-8，约4小时。06:45抵达吉隆坡 (KUL)。" }, flightStatus: "https://www.flightradar24.com/data/flights/mh523" },
+    { t: "06:45", icon: "🔄", title: { it: "Scalo a Kuala Lumpur (KUL · T1)", en: "Layover in Kuala Lumpur (KUL · T1)", zh: "吉隆坡转机 (KUL · T1)" },
+      desc: { it: "~2h15 di attesa, stesso terminal: caffè, sgranchirsi le gambe, niente fretta.", en: "~2h15 wait, same terminal: coffee, stretch your legs, no rush.", zh: "约2小时15分，同一航站楼：喝杯咖啡、活动一下、不必赶时间。" } },
+    { t: "09:00", icon: "✈️", title: { it: "Volo MH715 · Kuala Lumpur → Bali", en: "Flight MH715 · Kuala Lumpur → Bali", zh: "航班 MH715 · 吉隆坡 → 巴厘岛" },
+      desc: { it: "Airbus A330-300, ~3h05.", en: "Airbus A330-300, ~3h05.", zh: "空客A330-300，约3小时05分。" }, flightStatus: "https://www.flightradar24.com/data/flights/mh715" },
+    { t: "11:47", icon: "🛬", title: { it: "Atterraggio a Bali (DPS)", en: "Landing in Bali (DPS)", zh: "抵达巴厘岛 (DPS)" },
+      desc: { it: "Terminal Internazionale. Attivare subito la eSIM: serve per Grab e per il delivery del pranzo.", en: "International Terminal. Activate the eSIM right away: needed for Grab and lunch delivery.", zh: "国际航站楼。立即激活eSIM：Grab打车和外卖都需要它。" }, map: gm("Ngurah Rai International Airport Bali") },
     { t: "13:00", icon: "🚗", title: { it: "Transfer alla Dewani (~35 min)", en: "Transfer to Dewani (~35 min)", zh: "前往Dewani别墅 (~35分钟)" },
       desc: { it: "Transfer privato prenotato = zero pensieri; Grab più economico ma con ~400 m a piedi fino alla lounge e-hailing.", en: "Pre-booked private transfer = zero hassle; Grab is cheaper but requires a ~400 m walk to the e-hailing lounge.", zh: "预订接机=省心；Grab更便宜但需步行约400米到网约车候车区。" } },
     { t: "14:00", icon: "🏡", title: { it: "Check-in, doccia, piscina", en: "Check-in, shower, pool", zh: "入住、洗漱、泳池" },
@@ -744,48 +731,197 @@ const INFO = {
 // ============================================================
 // BOOKINGS checklist
 // ============================================================
-const BOOKINGS = {
+const BOOKING_CATS = {
   it: [
-    { s: "✅", what: "Lagonara Snorkeling (G4, 12:00, barca privata 2h)", when: "Fatto", how: "WhatsApp — riconferma condizioni mare la sera del 22/7" },
-    { s: "🥂", what: "Arcadia (G5, ~18:45)", when: "Appena possibile (spesso caparra)", how: "WhatsApp — segnalare l'occasione speciale" },
-    { s: "🛟", what: "Floating breakfast alla Nau (G5, 8:30)", when: "Al check-in alla Nau (G3) o prima", how: "Direttamente con la villa (a pagamento)" },
-    { s: "💆", what: "Svaha Spa Umalas (G1, ~16:00)", when: "Qualche giorno prima della partenza", how: "WhatsApp — \"Balinese Couple Massage\"" },
-    { s: "🍷", what: "Uma Garden (G1, cena ~19:00)", when: "Qualche giorno prima", how: "WhatsApp/sito — tavolo in giardino" },
-    { s: "🌊", what: "Verifica maree (G8 Suluban, G9 Tegal Wangi)", when: "Qualche giorno prima + il giorno stesso", how: "App maree (Tide Charts) o sundaysbeachclub.com/bali-tide-chart" },
-    { s: "🍽️", what: "AKASA – Jumeirah (G8, cena ~19:45)", when: "2–3 giorni prima", how: "Sito/WhatsApp — smart casual" },
-    { s: "🍽️", what: "Oliverra (G6, ~19:00; riserva WAATU)", when: "2–3 giorni prima", how: "WhatsApp/Instagram" },
-    { s: "🌅", what: "El Kabron (G9, se scelto)", when: "2–3 giorni prima", how: "Restaurant Area: sito \"Book Now\" o Chope. Sunset Theater: posto a pagamento. Non rimborsabile, +10%+10%" },
-    { s: "✈️", what: "Transfer aeroporto (G1 e G10)", when: "Prima della partenza / il giorno prima", how: "Villa o servizio transfer" },
-    { s: "🚗", what: "Autista fidato", when: "Dal G2, poi su WhatsApp", how: "Tramite la villa o recensioni" },
-    { s: "🏖️", what: "Sundays (G7)", when: "Non prenotabile (solo VIP)", how: "Posti first-come → arrivare alle 10:00" },
+    { id: "alloggi",    icon: "🏨", label: "Alloggi" },
+    { id: "voli",       icon: "✈️", label: "Voli" },
+    { id: "ristoranti", icon: "🍽️", label: "Ristoranti" },
+    { id: "attivita",   icon: "🎟️", label: "Attività" },
+    { id: "trasporti",  icon: "🚗", label: "Trasporti" },
   ],
   en: [
-    { s: "✅", what: "Lagonara Snorkeling (D4, 12:00, private boat 2h)", when: "Done", how: "WhatsApp — reconfirm sea conditions on the evening of 22/7" },
-    { s: "🥂", what: "Arcadia (D5, ~18:45)", when: "As soon as possible (deposit likely)", how: "WhatsApp — mention the special occasion" },
-    { s: "🛟", what: "Floating breakfast at Nau (D5, 8:30)", when: "At Nau check-in (D3) or earlier", how: "Directly with the villa (paid)" },
-    { s: "💆", what: "Svaha Spa Umalas (D1, ~16:00)", when: "A few days before departure", how: "WhatsApp — \"Balinese Couple Massage\"" },
-    { s: "🍷", what: "Uma Garden (D1, dinner ~19:00)", when: "A few days ahead", how: "WhatsApp/site — garden table" },
-    { s: "🌊", what: "Tide check (D8 Suluban, D9 Tegal Wangi)", when: "A few days ahead + same day", how: "Tide app (Tide Charts) or sundaysbeachclub.com/bali-tide-chart" },
-    { s: "🍽️", what: "AKASA – Jumeirah (D8, dinner ~19:45)", when: "2–3 days ahead", how: "Site/WhatsApp — smart casual" },
-    { s: "🍽️", what: "Oliverra (D6, ~19:00; WAATU backup)", when: "2–3 days ahead", how: "WhatsApp/Instagram" },
-    { s: "🌅", what: "El Kabron (D9, if chosen)", when: "2–3 days ahead", how: "Restaurant Area: site \"Book Now\" or Chope. Sunset Theater: paid seating. Non-refundable, +10%+10%" },
-    { s: "✈️", what: "Airport transfers (D1 and D10)", when: "Before departure / the day before", how: "Villa or transfer service" },
-    { s: "🚗", what: "Trusted driver", when: "From D2, then on WhatsApp", how: "Via the villa or reviews" },
-    { s: "🏖️", what: "Sundays (D7)", when: "Not bookable (VIP only)", how: "First-come seating → arrive at 10:00" },
+    { id: "alloggi",    icon: "🏨", label: "Stays" },
+    { id: "voli",       icon: "✈️", label: "Flights" },
+    { id: "ristoranti", icon: "🍽️", label: "Restaurants" },
+    { id: "attivita",   icon: "🎟️", label: "Activities" },
+    { id: "trasporti",  icon: "🚗", label: "Transport" },
   ],
   zh: [
-    { s: "✅", what: "Lagonara浮潜（第4天，12:00，私人船2小时）", when: "已完成", how: "WhatsApp——7月22日晚再次确认海况" },
-    { s: "🥂", what: "Arcadia（第5天，约18:45）", when: "尽快（通常需订金）", how: "WhatsApp——注明特殊纪念日" },
-    { s: "🛟", what: "Nau漂浮早餐（第5天，8:30）", when: "第3天入住时或更早", how: "直接向别墅预订（收费）" },
-    { s: "💆", what: "Svaha Spa Umalas（第1天，约16:00）", when: "出发前几天", how: "WhatsApp——\"巴厘岛双人按摩\"" },
-    { s: "🍷", what: "Uma Garden（第1天，晚餐约19:00）", when: "提前几天", how: "WhatsApp/官网——花园座位" },
-    { s: "🌊", what: "查潮汐（第8天苏鲁班，第9天Tegal Wangi）", when: "提前几天+当天", how: "潮汐App（Tide Charts）或 sundaysbeachclub.com/bali-tide-chart" },
-    { s: "🍽️", what: "AKASA – Jumeirah（第8天，晚餐约19:45）", when: "提前2–3天", how: "官网/WhatsApp——Smart Casual着装" },
-    { s: "🍽️", what: "Oliverra（第6天，约19:00；备选WAATU）", when: "提前2–3天", how: "WhatsApp/Instagram" },
-    { s: "🌅", what: "El Kabron（第9天，若选择）", when: "提前2–3天", how: "餐厅区：官网\"Book Now\"或Chope。Sunset Theater：座位收费。不可退款，+10%+10%" },
-    { s: "✈️", what: "机场接送（第1天和第10天）", when: "出发前/前一天", how: "别墅或接送服务" },
-    { s: "🚗", what: "可靠包车司机", when: "第2天起，保存WhatsApp", how: "通过别墅或查评价" },
-    { s: "🏖️", what: "Sundays（第7天）", when: "不可预订（仅VIP区）", how: "先到先得→10:00到达" },
+    { id: "alloggi",    icon: "🏨", label: "住宿" },
+    { id: "voli",       icon: "✈️", label: "航班" },
+    { id: "ristoranti", icon: "🍽️", label: "餐厅" },
+    { id: "attivita",   icon: "🎟️", label: "活动" },
+    { id: "trasporti",  icon: "🚗", label: "交通" },
+  ],
+};
+
+const BOOKINGS = {
+  it: [
+    // ---- ALLOGGI (tutti già prenotati · check-in dalle 14:00 · check-out entro le 12:00) ----
+    { cat: "alloggi", s: "🏝️", what: "Dewani Villa Resort", sub: "Kerobokan / Umalas", map: gm("Dewani Villa Resort Bali"), rows: [
+      ["Soggiorno", "20 → 21 lug · 1 notte"], ["Check-in / out", "dalle 14:00 / entro le 12:00"], ["Colazione", "Inclusa"], ["Stato", "Prenotato ✓"] ] },
+    { cat: "alloggi", s: "🌿", what: "The Sakara Ubud Villas", sub: "Ubud", map: gm("The Sakara Ubud Villas"), rows: [
+      ["Soggiorno", "21 → 22 lug · 1 notte"], ["Check-in / out", "dalle 14:00 / entro le 12:00"], ["Colazione", "Inclusa"], ["Stato", "Prenotato ✓"] ] },
+    { cat: "alloggi", s: "🛕", what: "Nau Villa Ubud", sub: "Tegallalang", map: gm("Nau Villa Ubud Tegallalang"), rows: [
+      ["Soggiorno", "22 → 24 lug · 2 notti"], ["Check-in / out", "dalle 14:00 / entro le 12:00"], ["Colazione", "Non inclusa (Capung Coffee a ~250 m; oppure floating breakfast a pagamento)"], ["Stato", "Prenotato ✓"] ] },
+    { cat: "alloggi", s: "🌾", what: "Mahajiva", sub: "Sibang Kaja (Ubud sud)", map: gm("Mahajiva Sibang Kaja Bali"), rows: [
+      ["Soggiorno", "24 → 25 lug · 1 notte"], ["Check-in / out", "dalle 14:00 / entro le 12:00"], ["Colazione", "Non inclusa (Taani a ~1 min; oppure delivery)"], ["Stato", "Prenotato ✓"] ] },
+    { cat: "alloggi", s: "🌺", what: "Nunamkhalu Private Villas & Spa", sub: "Ungasan (Bukit)", map: gm("Nunamkhalu Private Villas Spa Ungasan"), rows: [
+      ["Soggiorno", "25 → 27 lug · 2 notti"], ["Check-in / out", "dalle 14:00 / entro le 12:00"], ["Colazione", "Inclusa"], ["Stato", "Prenotato ✓"] ] },
+    { cat: "alloggi", s: "🌊", what: "Bombora Balangan Resort", sub: "Balangan (Bukit)", map: gm("Bombora Balangan Resort"), rows: [
+      ["Soggiorno", "27 → 29 lug · 2 notti"], ["Check-in / out", "dalle 14:00 / entro le 12:00"], ["Colazione", "Inclusa"], ["Stato", "Prenotato ✓"] ] },
+
+    // ---- VOLI (Malaysia Airlines · Shenzhen ⇄ Kuala Lumpur ⇄ Bali) ----
+    { cat: "voli", s: "🛫", what: "MH523 · Shenzhen → Kuala Lumpur", rows: [
+      ["Data", "Lun 20 lug"], ["Orari", "02:45 → 06:45 (SZX → KUL)"], ["Aereo", "Boeing 737-8 · ~4h"], ["Scalo", "A Kuala Lumpur, ~2h15 prima del volo per Bali"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh523" },
+    { cat: "voli", s: "🛬", what: "MH715 · Kuala Lumpur → Bali", rows: [
+      ["Data", "Lun 20 lug"], ["Orari", "09:00 → 11:47 (KUL → DPS)"], ["Aereo", "Airbus A330-300 · ~3h05"], ["Arrivo", "Denpasar (DPS), Terminal Internazionale"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh715" },
+    { cat: "voli", s: "🛫", what: "MH850 · Bali → Kuala Lumpur", rows: [
+      ["Data", "Mer 29 lug"], ["Orari", "16:25 → 19:35 (DPS → KUL)"], ["Aereo", "Boeing 737 MAX 8 · ~3h10"], ["Scalo", "A Kuala Lumpur (T1), ~1h30 prima del volo per Shenzhen"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh850" },
+    { cat: "voli", s: "🛬", what: "MH522 · Kuala Lumpur → Shenzhen", rows: [
+      ["Data", "Mer 29 lug"], ["Orari", "21:05 → 01:15 +1 (KUL → SZX)"], ["Aereo", "Boeing 737 MAX 8 · ~4h10"], ["Note", "Bagaglio di norma imbarcato fino a destinazione: confermare al check-in"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh522" },
+
+    // ---- RISTORANTI ----
+    { cat: "ristoranti", s: "🥂", what: "Arcadia (G5, ~18:45)", rows: [
+      ["Quando", "Appena possibile (spesso caparra)"], ["Come", "WhatsApp — segnalare l'occasione speciale"] ] },
+    { cat: "ristoranti", s: "🍷", what: "Uma Garden (G1, cena ~19:00)", rows: [
+      ["Quando", "Qualche giorno prima"], ["Come", "WhatsApp/sito — tavolo in giardino"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "AKASA – Jumeirah (G8, cena ~19:45)", rows: [
+      ["Quando", "2–3 giorni prima"], ["Come", "Sito/WhatsApp — smart casual"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Oliverra (G6, ~19:00; riserva WAATU)", rows: [
+      ["Quando", "2–3 giorni prima"], ["Come", "WhatsApp/Instagram"] ] },
+    { cat: "ristoranti", s: "🌅", what: "El Kabron (G9, se scelto)", rows: [
+      ["Quando", "2–3 giorni prima"], ["Come", "Restaurant Area: sito \"Book Now\" o Chope. Sunset Theater: posto a pagamento. Non rimborsabile, +10%+10%"] ] },
+
+    // ---- ATTIVITÀ ----
+    { cat: "attivita", s: "✅", what: "Lagonara Snorkeling (G4, 12:00, barca privata 2h)", rows: [
+      ["Quando", "Fatto"], ["Come", "WhatsApp — riconferma condizioni mare la sera del 22/7"] ] },
+    { cat: "attivita", s: "💆", what: "Svaha Spa Umalas (G1, ~16:00)", rows: [
+      ["Quando", "Qualche giorno prima della partenza"], ["Come", "WhatsApp — \"Balinese Couple Massage\""] ] },
+    { cat: "attivita", s: "🛟", what: "Floating breakfast alla Nau (G5, 8:30)", rows: [
+      ["Quando", "Al check-in alla Nau (G3) o prima"], ["Come", "Direttamente con la villa (a pagamento)"] ] },
+    { cat: "attivita", s: "🏖️", what: "Sundays (G7)", rows: [
+      ["Quando", "Non prenotabile (solo VIP)"], ["Come", "Posti first-come → arrivare alle 10:00"] ] },
+    { cat: "attivita", s: "🌊", what: "Verifica maree (G8 Suluban, G9 Tegal Wangi)", rows: [
+      ["Quando", "Qualche giorno prima + il giorno stesso"], ["Come", "App maree (Tide Charts) o sundaysbeachclub.com/bali-tide-chart"] ] },
+
+    // ---- TRASPORTI ----
+    { cat: "trasporti", s: "✈️", what: "Transfer aeroporto (G1 e G10)", rows: [
+      ["Quando", "Prima della partenza / il giorno prima"], ["Come", "Villa o servizio transfer"] ] },
+    { cat: "trasporti", s: "🚗", what: "Autista fidato", rows: [
+      ["Quando", "Dal G2, poi su WhatsApp"], ["Come", "Tramite la villa o recensioni"] ] },
+  ],
+
+  en: [
+    // ---- STAYS (all booked · check-in from 14:00 · check-out by 12:00) ----
+    { cat: "alloggi", s: "🏝️", what: "Dewani Villa Resort", sub: "Kerobokan / Umalas", map: gm("Dewani Villa Resort Bali"), rows: [
+      ["Stay", "20 → 21 Jul · 1 night"], ["Check-in / out", "from 14:00 / by 12:00"], ["Breakfast", "Included"], ["Status", "Booked ✓"] ] },
+    { cat: "alloggi", s: "🌿", what: "The Sakara Ubud Villas", sub: "Ubud", map: gm("The Sakara Ubud Villas"), rows: [
+      ["Stay", "21 → 22 Jul · 1 night"], ["Check-in / out", "from 14:00 / by 12:00"], ["Breakfast", "Included"], ["Status", "Booked ✓"] ] },
+    { cat: "alloggi", s: "🛕", what: "Nau Villa Ubud", sub: "Tegallalang", map: gm("Nau Villa Ubud Tegallalang"), rows: [
+      ["Stay", "22 → 24 Jul · 2 nights"], ["Check-in / out", "from 14:00 / by 12:00"], ["Breakfast", "Not included (Capung Coffee ~250 m; or paid floating breakfast)"], ["Status", "Booked ✓"] ] },
+    { cat: "alloggi", s: "🌾", what: "Mahajiva", sub: "Sibang Kaja (South Ubud)", map: gm("Mahajiva Sibang Kaja Bali"), rows: [
+      ["Stay", "24 → 25 Jul · 1 night"], ["Check-in / out", "from 14:00 / by 12:00"], ["Breakfast", "Not included (Taani ~1 min; or delivery)"], ["Status", "Booked ✓"] ] },
+    { cat: "alloggi", s: "🌺", what: "Nunamkhalu Private Villas & Spa", sub: "Ungasan (Bukit)", map: gm("Nunamkhalu Private Villas Spa Ungasan"), rows: [
+      ["Stay", "25 → 27 Jul · 2 nights"], ["Check-in / out", "from 14:00 / by 12:00"], ["Breakfast", "Included"], ["Status", "Booked ✓"] ] },
+    { cat: "alloggi", s: "🌊", what: "Bombora Balangan Resort", sub: "Balangan (Bukit)", map: gm("Bombora Balangan Resort"), rows: [
+      ["Stay", "27 → 29 Jul · 2 nights"], ["Check-in / out", "from 14:00 / by 12:00"], ["Breakfast", "Included"], ["Status", "Booked ✓"] ] },
+
+    // ---- FLIGHTS ----
+    { cat: "voli", s: "🛫", what: "MH523 · Shenzhen → Kuala Lumpur", rows: [
+      ["Date", "Mon 20 Jul"], ["Times", "02:45 → 06:45 (SZX → KUL)"], ["Aircraft", "Boeing 737-8 · ~4h"], ["Layover", "In Kuala Lumpur, ~2h15 before the Bali flight"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh523" },
+    { cat: "voli", s: "🛬", what: "MH715 · Kuala Lumpur → Bali", rows: [
+      ["Date", "Mon 20 Jul"], ["Times", "09:00 → 11:47 (KUL → DPS)"], ["Aircraft", "Airbus A330-300 · ~3h05"], ["Arrival", "Denpasar (DPS), International Terminal"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh715" },
+    { cat: "voli", s: "🛫", what: "MH850 · Bali → Kuala Lumpur", rows: [
+      ["Date", "Wed 29 Jul"], ["Times", "16:25 → 19:35 (DPS → KUL)"], ["Aircraft", "Boeing 737 MAX 8 · ~3h10"], ["Layover", "In Kuala Lumpur (T1), ~1h30 before the Shenzhen flight"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh850" },
+    { cat: "voli", s: "🛬", what: "MH522 · Kuala Lumpur → Shenzhen", rows: [
+      ["Date", "Wed 29 Jul"], ["Times", "21:05 → 01:15 +1 (KUL → SZX)"], ["Aircraft", "Boeing 737 MAX 8 · ~4h10"], ["Note", "Luggage usually checked through to destination: confirm at check-in"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh522" },
+
+    // ---- RESTAURANTS ----
+    { cat: "ristoranti", s: "🥂", what: "Arcadia (D5, ~18:45)", rows: [
+      ["When", "As soon as possible (deposit likely)"], ["How", "WhatsApp — mention the special occasion"] ] },
+    { cat: "ristoranti", s: "🍷", what: "Uma Garden (D1, dinner ~19:00)", rows: [
+      ["When", "A few days ahead"], ["How", "WhatsApp/site — garden table"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "AKASA – Jumeirah (D8, dinner ~19:45)", rows: [
+      ["When", "2–3 days ahead"], ["How", "Site/WhatsApp — smart casual"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Oliverra (D6, ~19:00; WAATU backup)", rows: [
+      ["When", "2–3 days ahead"], ["How", "WhatsApp/Instagram"] ] },
+    { cat: "ristoranti", s: "🌅", what: "El Kabron (D9, if chosen)", rows: [
+      ["When", "2–3 days ahead"], ["How", "Restaurant Area: site \"Book Now\" or Chope. Sunset Theater: paid seating. Non-refundable, +10%+10%"] ] },
+
+    // ---- ACTIVITIES ----
+    { cat: "attivita", s: "✅", what: "Lagonara Snorkeling (D4, 12:00, private boat 2h)", rows: [
+      ["When", "Done"], ["How", "WhatsApp — reconfirm sea conditions on the evening of 22/7"] ] },
+    { cat: "attivita", s: "💆", what: "Svaha Spa Umalas (D1, ~16:00)", rows: [
+      ["When", "A few days before departure"], ["How", "WhatsApp — \"Balinese Couple Massage\""] ] },
+    { cat: "attivita", s: "🛟", what: "Floating breakfast at Nau (D5, 8:30)", rows: [
+      ["When", "At Nau check-in (D3) or earlier"], ["How", "Directly with the villa (paid)"] ] },
+    { cat: "attivita", s: "🏖️", what: "Sundays (D7)", rows: [
+      ["When", "Not bookable (VIP only)"], ["How", "First-come seating → arrive at 10:00"] ] },
+    { cat: "attivita", s: "🌊", what: "Tide check (D8 Suluban, D9 Tegal Wangi)", rows: [
+      ["When", "A few days ahead + same day"], ["How", "Tide app (Tide Charts) or sundaysbeachclub.com/bali-tide-chart"] ] },
+
+    // ---- TRANSPORT ----
+    { cat: "trasporti", s: "✈️", what: "Airport transfers (D1 and D10)", rows: [
+      ["When", "Before departure / the day before"], ["How", "Villa or transfer service"] ] },
+    { cat: "trasporti", s: "🚗", what: "Trusted driver", rows: [
+      ["When", "From D2, then on WhatsApp"], ["How", "Via the villa or reviews"] ] },
+  ],
+
+  zh: [
+    // ---- 住宿（全部已预订 · 14:00起入住 · 12:00前退房） ----
+    { cat: "alloggi", s: "🏝️", what: "Dewani Villa Resort", sub: "克罗博坎 / 乌马拉斯", map: gm("Dewani Villa Resort Bali"), rows: [
+      ["入住时段", "7月20 → 21日 · 1晚"], ["入住 / 退房", "14:00起 / 12:00前"], ["早餐", "含"], ["状态", "已预订 ✓"] ] },
+    { cat: "alloggi", s: "🌿", what: "The Sakara Ubud Villas", sub: "乌布", map: gm("The Sakara Ubud Villas"), rows: [
+      ["入住时段", "7月21 → 22日 · 1晚"], ["入住 / 退房", "14:00起 / 12:00前"], ["早餐", "含"], ["状态", "已预订 ✓"] ] },
+    { cat: "alloggi", s: "🛕", what: "Nau Villa Ubud", sub: "特加拉朗", map: gm("Nau Villa Ubud Tegallalang"), rows: [
+      ["入住时段", "7月22 → 24日 · 2晚"], ["入住 / 退房", "14:00起 / 12:00前"], ["早餐", "不含（Capung Coffee约250米；或付费漂浮早餐）"], ["状态", "已预订 ✓"] ] },
+    { cat: "alloggi", s: "🌾", what: "Mahajiva", sub: "Sibang Kaja（乌布南部）", map: gm("Mahajiva Sibang Kaja Bali"), rows: [
+      ["入住时段", "7月24 → 25日 · 1晚"], ["入住 / 退房", "14:00起 / 12:00前"], ["早餐", "不含（Taani约1分钟；或外卖）"], ["状态", "已预订 ✓"] ] },
+    { cat: "alloggi", s: "🌺", what: "Nunamkhalu Private Villas & Spa", sub: "乌干沙（布吉）", map: gm("Nunamkhalu Private Villas Spa Ungasan"), rows: [
+      ["入住时段", "7月25 → 27日 · 2晚"], ["入住 / 退房", "14:00起 / 12:00前"], ["早餐", "含"], ["状态", "已预订 ✓"] ] },
+    { cat: "alloggi", s: "🌊", what: "Bombora Balangan Resort", sub: "巴兰甘（布吉）", map: gm("Bombora Balangan Resort"), rows: [
+      ["入住时段", "7月27 → 29日 · 2晚"], ["入住 / 退房", "14:00起 / 12:00前"], ["早餐", "含"], ["状态", "已预订 ✓"] ] },
+
+    // ---- 航班 ----
+    { cat: "voli", s: "🛫", what: "MH523 · 深圳 → 吉隆坡", rows: [
+      ["日期", "7月20日 周一"], ["时间", "02:45 → 06:45 (SZX → KUL)"], ["机型", "波音737-8 · 约4小时"], ["中转", "吉隆坡，距飞巴厘岛航班约2小时15分"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh523" },
+    { cat: "voli", s: "🛬", what: "MH715 · 吉隆坡 → 巴厘岛", rows: [
+      ["日期", "7月20日 周一"], ["时间", "09:00 → 11:47 (KUL → DPS)"], ["机型", "空客A330-300 · 约3小时05分"], ["抵达", "登巴萨 (DPS)，国际航站楼"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh715" },
+    { cat: "voli", s: "🛫", what: "MH850 · 巴厘岛 → 吉隆坡", rows: [
+      ["日期", "7月29日 周三"], ["时间", "16:25 → 19:35 (DPS → KUL)"], ["机型", "波音737 MAX 8 · 约3小时10分"], ["中转", "吉隆坡（T1），距飞深圳航班约1小时30分"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh850" },
+    { cat: "voli", s: "🛬", what: "MH522 · 吉隆坡 → 深圳", rows: [
+      ["日期", "7月29日 周三"], ["时间", "21:05 → 01:15 +1 (KUL → SZX)"], ["机型", "波音737 MAX 8 · 约4小时10分"], ["备注", "行李通常直挂目的地：值机时确认"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh522" },
+
+    // ---- 餐厅 ----
+    { cat: "ristoranti", s: "🥂", what: "Arcadia（第5天，约18:45）", rows: [
+      ["时间", "尽快（通常需订金）"], ["方式", "WhatsApp——注明特殊纪念日"] ] },
+    { cat: "ristoranti", s: "🍷", what: "Uma Garden（第1天，晚餐约19:00）", rows: [
+      ["时间", "提前几天"], ["方式", "WhatsApp/官网——花园座位"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "AKASA – Jumeirah（第8天，晚餐约19:45）", rows: [
+      ["时间", "提前2–3天"], ["方式", "官网/WhatsApp——Smart Casual着装"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Oliverra（第6天，约19:00；备选WAATU）", rows: [
+      ["时间", "提前2–3天"], ["方式", "WhatsApp/Instagram"] ] },
+    { cat: "ristoranti", s: "🌅", what: "El Kabron（第9天，若选择）", rows: [
+      ["时间", "提前2–3天"], ["方式", "餐厅区：官网\"Book Now\"或Chope。Sunset Theater：座位收费。不可退款，+10%+10%"] ] },
+
+    // ---- 活动 ----
+    { cat: "attivita", s: "✅", what: "Lagonara浮潜（第4天，12:00，私人船2小时）", rows: [
+      ["时间", "已完成"], ["方式", "WhatsApp——7月22日晚再次确认海况"] ] },
+    { cat: "attivita", s: "💆", what: "Svaha Spa Umalas（第1天，约16:00）", rows: [
+      ["时间", "出发前几天"], ["方式", "WhatsApp——\"巴厘岛双人按摩\""] ] },
+    { cat: "attivita", s: "🛟", what: "Nau漂浮早餐（第5天，8:30）", rows: [
+      ["时间", "第3天入住时或更早"], ["方式", "直接向别墅预订（收费）"] ] },
+    { cat: "attivita", s: "🏖️", what: "Sundays（第7天）", rows: [
+      ["时间", "不可预订（仅VIP区）"], ["方式", "先到先得→10:00到达"] ] },
+    { cat: "attivita", s: "🌊", what: "查潮汐（第8天苏鲁班，第9天Tegal Wangi）", rows: [
+      ["时间", "提前几天+当天"], ["方式", "潮汐App（Tide Charts）或 sundaysbeachclub.com/bali-tide-chart"] ] },
+
+    // ---- 交通 ----
+    { cat: "trasporti", s: "✈️", what: "机场接送（第1天和第10天）", rows: [
+      ["时间", "出发前/前一天"], ["方式", "别墅或接送服务"] ] },
+    { cat: "trasporti", s: "🚗", what: "可靠包车司机", rows: [
+      ["时间", "第2天起，保存WhatsApp"], ["方式", "通过别墅或查评价"] ] },
   ],
 };
 

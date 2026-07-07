@@ -178,10 +178,6 @@ body{
 .btn:active{opacity:.85}
 
 /* flights */
-.flightrow{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
-.flightrow:last-child{border-bottom:none}
-.flightrow .fr{font-weight:700}
-.flightrow .fd{font-family:var(--font-mono);font-size:.72rem;color:var(--ink-soft);white-space:nowrap}
 
 /* ---------- Day page ---------- */
 .dayhero{
@@ -289,6 +285,8 @@ body{
 /* bookings table (cards on mobile) */
 .bookcard{display:grid;gap:4px}
 .bookcard .bw{font-weight:700;display:flex;gap:8px;align-items:baseline}
+.bookcard .bsub{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.04em;color:var(--ocean);margin:-1px 0 3px}
+.bookcard .maplink{justify-self:start;margin-top:9px}
 .bookcard .lbl{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ocean);margin-top:4px}
 .bookcard .bv{font-size:.85rem;color:var(--ink-soft)}
 

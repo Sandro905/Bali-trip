@@ -49,7 +49,6 @@
   // ---------- pages ----------
   function homePage() {
     const ch = CHAPTERS[lang];
-    const fl = FLIGHTS[lang];
     return `
     <div class="wrap">
       <div class="hero">
@@ -98,13 +97,6 @@
                 <div class="d">${esc(d.date[lang])}</div>
               </div>
             </a>`).join("")}
-        </div>
-      </div>
-
-      <div class="section">
-        <h2>${esc(t().flights)}</h2>
-        <div class="card">
-          ${fl.map((f) => `<div class="flightrow"><span class="fr">${esc(f[0])}</span><span class="fd">${esc(f[1])}</span></div>`).join("")}
         </div>
       </div>
 
@@ -160,6 +152,7 @@
               <div class="tt"><span class="ic">${s.icon}</span> ${esc(s.title[lang])}</div>
               ${s.desc[lang] ? `<div class="td">${esc(s.desc[lang])}</div>` : ""}
               ${s.map ? `<a class="maplink" href="${s.map}" target="_blank" rel="noopener">📍 ${esc(t().openMap)}</a>` : ""}
+              ${s.flightStatus ? `<a class="maplink" href="${s.flightStatus}" target="_blank" rel="noopener">🔴 ${esc(t().flightStatus)}</a>` : ""}
             </div>`).join("")}
         </div>
       </div>
@@ -213,17 +206,27 @@
   }
 
   function bookingsPage() {
+    const all = BOOKINGS[lang];
+    const card = (b) => `
+      <div class="card bookcard">
+        <div class="bw"><span>${b.s}</span> <span>${esc(b.what)}</span></div>
+        ${b.sub ? `<div class="bsub">${esc(b.sub)}</div>` : ""}
+        ${b.rows.map(([l, v]) => `<div class="lbl">${esc(l)}</div><div class="bv">${esc(v)}</div>`).join("")}
+        ${b.map ? `<a class="maplink" href="${b.map}" target="_blank" rel="noopener">📍 ${esc(t().openMap)}</a>` : ""}
+        ${b.flightStatus ? `<a class="maplink" href="${b.flightStatus}" target="_blank" rel="noopener">🔴 ${esc(t().flightStatus)}</a>` : ""}
+      </div>`;
     return `
     <div class="wrap">
       <div class="hero"><h1>📋 <span class="accent">${esc(t().bookings)}</span></h1></div>
-      <div class="daylist">
-        ${BOOKINGS[lang].map((b) => `
-          <div class="card bookcard">
-            <div class="bw"><span>${b.s}</span> <span>${esc(b.what)}</span></div>
-            <div class="lbl">${esc(t().bookWhen)}</div><div class="bv">${esc(b.when)}</div>
-            <div class="lbl">${esc(t().bookHow)}</div><div class="bv">${esc(b.how)}</div>
-          </div>`).join("")}
-      </div>
+      ${BOOKING_CATS[lang].map((c) => {
+        const items = all.filter((b) => b.cat === c.id);
+        if (!items.length) return "";
+        return `
+        <div class="section">
+          <h2>${c.icon} ${esc(c.label)}</h2>
+          <div class="daylist">${items.map(card).join("")}</div>
+        </div>`;
+      }).join("")}
     </div>`;
   }
 
