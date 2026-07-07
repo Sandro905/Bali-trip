@@ -145,15 +145,28 @@
       <div class="section">
         <h2>${esc(t().timeline)}</h2>
         <div class="timeline">
-          ${d.timeline.map((s) => `
+          ${(() => {
+            const stopHtml = (s) => `
             <div class="tstop">
               <div class="time">${esc(s.t)}</div>
               <div class="knot"></div>
               <div class="tt"><span class="ic">${s.icon}</span> ${esc(s.title[lang])}</div>
               ${s.desc[lang] ? `<div class="td">${esc(s.desc[lang])}</div>` : ""}
-              ${s.map ? `<a class="maplink" href="${s.map}" target="_blank" rel="noopener">📍 ${esc(t().openMap)}</a>` : ""}
+              ${(s.places || []).length ? `<div class="maplinks">${s.places.map((p) => `<a class="maplink" href="${p[1]}" target="_blank" rel="noopener" title="${esc(p[0])}">📍 <span class="mn">${esc(p[0])}</span></a>`).join("")}</div>` : ""}
+              ${s.menu ? `<a class="maplink" href="${s.menu}" target="_blank" rel="noopener">🔗 ${esc(t().menu)}</a>` : ""}
               ${s.flightStatus ? `<a class="maplink" href="${s.flightStatus}" target="_blank" rel="noopener">🔴 ${esc(t().flightStatus)}</a>` : ""}
-            </div>`).join("")}
+            </div>`;
+            // chunk consecutive stops sharing the same grp into a grouped card
+            const chunks = [];
+            d.timeline.forEach((s) => {
+              const last = chunks[chunks.length - 1];
+              if (s.grp && last && last.grp === s.grp) last.steps.push(s);
+              else chunks.push({ grp: s.grp || null, steps: [s] });
+            });
+            return chunks.map((c) => c.grp && d.groups && d.groups[c.grp]
+              ? `<div class="tgroup"><div class="tgh">${esc(d.groups[c.grp][lang])}</div>${c.steps.map(stopHtml).join("")}</div>`
+              : c.steps.map(stopHtml).join("")).join("");
+          })()}
         </div>
       </div>
 
@@ -209,10 +222,10 @@
     const all = BOOKINGS[lang];
     const card = (b) => `
       <div class="card bookcard">
-        <div class="bw"><span>${b.s}</span> <span>${esc(b.what)}</span></div>
+        <div class="bw"><span>${b.s}</span> <span>${b.map ? `<a href="${b.map}" target="_blank" rel="noopener">${esc(b.what)}</a>` : esc(b.what)}</span></div>
         ${b.sub ? `<div class="bsub">${esc(b.sub)}</div>` : ""}
         ${b.rows.map(([l, v]) => `<div class="lbl">${esc(l)}</div><div class="bv">${esc(v)}</div>`).join("")}
-        ${b.map ? `<a class="maplink" href="${b.map}" target="_blank" rel="noopener">📍 ${esc(t().openMap)}</a>` : ""}
+        ${b.map ? `<a class="maplink" href="${b.map}" target="_blank" rel="noopener">📍 <span class="mn">${esc(b.what)}</span></a>` : ""}
         ${b.flightStatus ? `<a class="maplink" href="${b.flightStatus}" target="_blank" rel="noopener">🔴 ${esc(t().flightStatus)}</a>` : ""}
       </div>`;
     return `

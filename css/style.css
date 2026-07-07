@@ -226,12 +226,29 @@ body{
 }
 .tstop .tt .ic{font-size:1.05rem}
 .tstop .td{color:var(--ink-soft);font-size:.88rem;margin-top:4px}
+/* grouped run of stops (e.g. multi-leg flight): card in the content column,
+   times/knots stay on the rail so the spine still threads through */
+.tgroup{
+  border:1px solid var(--line);border-radius:14px;
+  background:var(--card);
+  background:color-mix(in srgb, var(--ocean) 6%, var(--card));
+  padding:10px 12px 0 0;margin:2px 0 22px;
+}
+.tgroup .tgh{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ocean);margin:0 0 12px 18px;
+}
+.tgroup .tstop:last-child{padding-bottom:14px}
+
 .maplink{
-  display:inline-flex;align-items:center;gap:5px;margin-top:7px;
+  display:inline-flex;align-items:center;gap:5px;margin-top:7px;max-width:100%;min-width:0;
   font-family:var(--font-mono);font-size:.68rem;text-decoration:none;
   color:var(--ocean);border:1px solid var(--line);border-radius:999px;padding:4px 10px;
   background:var(--card);
 }
+.maplink .mn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px}
+.maplinks{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.maplinks .maplink{margin-top:0}
 
 /* ---- Trip map (Google My Maps embed) ---- */
 .mapembed{
