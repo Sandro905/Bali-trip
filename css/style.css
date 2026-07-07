@@ -1,0 +1,300 @@
+/* ============================================================
+   BALI 2026 — "Morning in the rice paddies"
+   Palette: paper-green bg, jungle ink, ocean + sunset accents.
+   Type: Bricolage Grotesque (display) / Karla (body) / IBM Plex Mono (times)
+   Signature: each day's timeline spine is a vertical gradient
+   that follows the colours of the day (dawn→noon→sunset→night).
+   ============================================================ */
+
+:root{
+  --bg:#F3F5EC;
+  --card:#FBFCF7;
+  --ink:#16261D;
+  --ink-soft:#4A5B50;
+  --jungle:#1F5137;
+  --ocean:#2A7F8E;
+  --sunset:#FF7A48;
+  --frangipani:#F2B33D;
+  --sand:#E7E1CE;
+  --line:#D9DECB;
+  --radius:18px;
+  --maxw:680px;
+  --nav-h:64px;
+  --font-display:"Bricolage Grotesque",system-ui,sans-serif;
+  --font-body:"Karla",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+body{
+  font-family:var(--font-body);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.55;
+  padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom));
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+
+/* ---------- Top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:40;
+  background:rgba(243,245,236,.92);
+  background:color-mix(in srgb, var(--bg) 88%, white);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:var(--maxw);margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 18px;
+}
+.brand{
+  font-family:var(--font-display);
+  font-weight:700;font-size:1rem;letter-spacing:-.01em;
+  color:var(--jungle);text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+}
+.brand .dot{width:10px;height:10px;border-radius:50%;
+  background:linear-gradient(135deg,var(--ocean),var(--sunset));}
+
+.langs{display:flex;gap:4px}
+.langs button{
+  font-family:var(--font-mono);font-size:.72rem;
+  padding:6px 9px;border-radius:999px;border:1px solid var(--line);
+  background:transparent;color:var(--ink-soft);cursor:pointer;
+}
+.langs button.on{background:var(--jungle);color:#fff;border-color:var(--jungle)}
+
+/* ---------- Bottom nav ---------- */
+.bottomnav{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  height:calc(var(--nav-h) + env(safe-area-inset-bottom));
+  padding-bottom:env(safe-area-inset-bottom);
+  background:var(--card);
+  border-top:1px solid var(--line);
+  display:flex;
+}
+.bottomnav a{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:2px;text-decoration:none;color:var(--ink-soft);
+  font-size:.68rem;font-family:var(--font-mono);letter-spacing:.02em;
+}
+.bottomnav a .ico{font-size:1.25rem;line-height:1}
+.bottomnav a.on{color:var(--jungle);font-weight:700}
+.bottomnav a.on .ico{transform:translateY(-1px)}
+
+/* ---------- Home hero ---------- */
+.hero{
+  padding:34px 0 22px;
+}
+.hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,8vw,2.9rem);
+  font-weight:800;letter-spacing:-.03em;line-height:1.04;
+  color:var(--jungle);
+}
+.hero h1 .accent{
+  background:linear-gradient(90deg,var(--ocean),var(--sunset));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p{margin-top:10px;color:var(--ink-soft);font-size:1rem}
+.hero .meta{
+  margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;
+}
+.chip{
+  font-family:var(--font-mono);font-size:.7rem;
+  background:var(--sand);border-radius:999px;padding:6px 12px;color:var(--ink);
+}
+
+/* ---------- Sections & cards ---------- */
+.section{margin:26px 0}
+.section > h2{
+  font-family:var(--font-display);font-weight:700;
+  font-size:1.15rem;letter-spacing:-.01em;margin-bottom:12px;color:var(--ink);
+  display:flex;align-items:center;gap:8px;
+}
+.section > h2::after{
+  content:"";flex:1;height:1px;background:var(--line);
+}
+
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:16px;
+}
+.card + .card{margin-top:10px}
+
+/* chapters */
+.chapters{display:grid;gap:10px}
+.chapter{display:flex;gap:14px;align-items:flex-start}
+.chapter .n{
+  font-family:var(--font-display);font-weight:800;font-size:1.6rem;
+  color:var(--frangipani);line-height:1;min-width:28px;
+}
+.chapter .t{font-weight:700}
+.chapter .s{color:var(--ink-soft);font-size:.9rem}
+.chapter .nights{font-family:var(--font-mono);font-size:.68rem;color:var(--ocean)}
+
+/* day list on home */
+.daylist{display:grid;gap:10px}
+.daycard{
+  display:block;text-decoration:none;color:inherit;
+  border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);background:var(--card);
+  transition:transform .15s ease;
+}
+.daycard:active{transform:scale(.985)}
+.daycard .cover{
+  height:74px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 16px;color:#fff;position:relative;
+  background-size:cover;background-position:center;
+}
+.daycard .cover::before{content:"";position:absolute;inset:0;background:inherit}
+.daycard .cover .dn{
+  font-family:var(--font-display);font-weight:800;font-size:1.7rem;
+  position:relative;text-shadow:0 1px 8px rgba(0,0,0,.25);
+}
+.daycard .cover .de{font-size:1.7rem;position:relative}
+.daycard .body{padding:12px 16px}
+.daycard .body .t{font-weight:700;font-family:var(--font-display);letter-spacing:-.01em}
+.daycard .body .s{color:var(--ink-soft);font-size:.85rem;margin-top:2px}
+.daycard .body .d{font-family:var(--font-mono);font-size:.68rem;color:var(--ocean);margin-top:6px}
+
+/* download button */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--jungle);color:#fff;text-decoration:none;
+  padding:12px 18px;border-radius:999px;font-weight:700;font-size:.92rem;
+  border:none;cursor:pointer;
+}
+.btn.ghost{background:transparent;color:var(--jungle);border:1.5px solid var(--jungle)}
+.btn:active{opacity:.85}
+
+/* flights */
+.flightrow{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.flightrow:last-child{border-bottom:none}
+.flightrow .fr{font-weight:700}
+.flightrow .fd{font-family:var(--font-mono);font-size:.72rem;color:var(--ink-soft);white-space:nowrap}
+
+/* ---------- Day page ---------- */
+.dayhero{
+  border-radius:var(--radius);overflow:hidden;margin-top:18px;
+  color:#fff;position:relative;
+  background-size:cover;background-position:center;
+}
+.dayhero .inner{padding:26px 18px 20px;position:relative}
+.dayhero .kicker{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.dayhero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,6.5vw,2.1rem);letter-spacing:-.02em;line-height:1.08;margin-top:6px;text-shadow:0 1px 10px rgba(0,0,0,.25)}
+.dayhero .sub{margin-top:8px;font-size:.9rem;opacity:.95}
+.dayhero .stay{
+  margin-top:14px;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.18);backdrop-filter:blur(4px);
+  border:1px solid rgba(255,255,255,.35);
+  padding:7px 12px;border-radius:999px;font-size:.8rem;color:#fff;text-decoration:none;
+}
+.intro{margin:16px 2px;color:var(--ink-soft);font-size:.95rem}
+
+/* ---- SIGNATURE: timeline with day-gradient spine ---- */
+.timeline{position:relative;margin:18px 0;padding-left:64px}
+.timeline::before{
+  content:"";position:absolute;left:52px;top:8px;bottom:8px;width:3px;border-radius:3px;
+  background:linear-gradient(180deg,
+    #7FB069 0%,        /* dawn green   */
+    var(--ocean) 38%,  /* noon ocean   */
+    var(--frangipani) 66%,
+    var(--sunset) 84%, /* sunset       */
+    #274046 100%);     /* night        */
+}
+.tstop{position:relative;padding:0 0 22px 18px}
+.tstop:last-child{padding-bottom:4px}
+.tstop .time{
+  position:absolute;left:-64px;top:2px;width:46px;text-align:right;
+  font-family:var(--font-mono);font-size:.72rem;color:var(--ink-soft);
+}
+.tstop .knot{
+  position:absolute;left:-16px;top:5px;width:13px;height:13px;border-radius:50%;
+  background:var(--card);border:3px solid var(--jungle);
+}
+.tstop .tt{
+  font-family:var(--font-display);font-weight:700;letter-spacing:-.01em;
+  display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+}
+.tstop .tt .ic{font-size:1.05rem}
+.tstop .td{color:var(--ink-soft);font-size:.88rem;margin-top:4px}
+.tstop .maplink{
+  display:inline-flex;align-items:center;gap:5px;margin-top:7px;
+  font-family:var(--font-mono);font-size:.68rem;text-decoration:none;
+  color:var(--ocean);border:1px solid var(--line);border-radius:999px;padding:4px 10px;
+  background:var(--card);
+}
+
+/* plan B / notes */
+.callout{
+  border-radius:var(--radius);padding:14px 16px;margin:14px 0;font-size:.88rem;
+  border:1px solid;
+}
+.callout.planb{background:#FFF4EC;border-color:#F6CDB4;color:#6B3A1F}
+.callout.notes{background:#EEF4F0;border-color:#CFE0D5;color:#274434}
+.callout.transport{background:#EDF3F5;border-color:#C9DEE3;color:#1F4750}
+.callout h3{font-family:var(--font-display);font-size:.85rem;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.callout ul{padding-left:18px;display:grid;gap:5px}
+
+/* day pager */
+.pager{display:flex;justify-content:space-between;gap:10px;margin:26px 0 10px}
+.pager a{
+  flex:1;text-align:center;text-decoration:none;color:var(--jungle);
+  font-family:var(--font-mono);font-size:.72rem;
+  border:1px solid var(--line);border-radius:999px;padding:10px;
+  background:var(--card);
+}
+.pager a.disabled{opacity:.35;pointer-events:none}
+
+/* ---------- Packing / info lists ---------- */
+.packgroup h3, .infogroup h3{
+  font-family:var(--font-display);font-weight:700;font-size:.98rem;
+  margin:18px 0 8px;color:var(--jungle);
+}
+.checklist{display:grid;gap:8px}
+.checklist label{
+  display:flex;gap:10px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:10px 12px;font-size:.88rem;cursor:pointer;
+}
+.checklist input{margin-top:3px;accent-color:var(--jungle);min-width:16px;height:16px}
+.checklist label.done{opacity:.45;text-decoration:line-through}
+
+.plainlist{display:grid;gap:8px}
+.plainlist li{
+  list-style:none;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:10px 12px;font-size:.88rem;
+}
+
+/* bookings table (cards on mobile) */
+.bookcard{display:grid;gap:4px}
+.bookcard .bw{font-weight:700;display:flex;gap:8px;align-items:baseline}
+.bookcard .lbl{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ocean);margin-top:4px}
+.bookcard .bv{font-size:.85rem;color:var(--ink-soft)}
+
+/* flex table */
+.flexrow{display:grid;gap:3px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.88rem}
+.flexrow:last-child{border-bottom:none}
+.flexrow .fw{font-weight:700}
+.flexrow .fg{font-family:var(--font-mono);font-size:.68rem;color:var(--sunset)}
+.flexrow .fr2{color:var(--ink-soft);font-size:.84rem}
+
+.smallnote{font-size:.75rem;color:var(--ink-soft);margin-top:12px;font-family:var(--font-mono)}
+
+footer{margin:36px 0 14px;text-align:center;color:var(--ink-soft);font-size:.72rem;font-family:var(--font-mono)}
+
+/* larger screens: keep the phone feel, centred */
+@media(min-width:720px){
+  .daylist{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:3.2rem}
+}
