@@ -146,7 +146,7 @@ const DAYS = [
     { t: "16:00", icon: "💆", title: { it: "Massaggio di coppia · Svaha Spa Umalas", en: "Couples massage · Svaha Spa Umalas", zh: "双人按摩 · Svaha Spa Umalas" },
       desc: { it: "\"Balinese Couple Massage\", 4 min in taxi. Prenotare prima via WhatsApp.", en: "\"Balinese Couple Massage\", 4 min by taxi. Book ahead via WhatsApp.", zh: "\"巴厘岛双人按摩\"，打车4分钟。提前通过WhatsApp预订。" }, places: [P("Svaha Spa Umalas", "Svaha Spa Umalas Bali")] },
     { t: "19:00", icon: "🍷", title: { it: "Cena · Uma Garden", en: "Dinner · Uma Garden", zh: "晚餐 · Uma Garden" },
-      desc: { it: "Steakhouse con giardino, curata ma rilassata, 5 min in taxi. Prenotare un tavolo all'aperto. Poi rientro e a letto presto.", en: "Garden steakhouse, polished but relaxed, 5 min by taxi. Book an outdoor table. Then back and early to bed.", zh: "花园牛排馆，精致而放松，打车5分钟。建议预订户外座位。之后返回别墅早点休息。" }, places: [P("Uma Garden", "Uma Garden Seminyak")] },
+      desc: { it: "Steakhouse con giardino, 5 min in taxi. Tavolo per 2, 19:00–21:00, sala interna con aria condizionata (rif. 06485437); tenuto 15 min, avvisare in caso di ritardo. Poi rientro e a letto presto.", en: "Garden steakhouse, 5 min by taxi. Table for 2, 19:00–21:00, indoor air-conditioned area (ref. 06485437); held 15 min, advise if running late. Then back and early to bed.", zh: "花园牛排馆，打车5分钟。2人桌，19:00–21:00，室内空调区（编号06485437）；座位保留15分钟，迟到请告知。之后返回别墅早点休息。" }, places: [P("Uma Garden", "Uma Garden Seminyak")] },
   ],
   notes: {
     it: ["Alternative cibo in zona: Mamasan (fusion elegante), Kilo Kitchen (creativa), KAMA Warung (indonesiano, calmo).", "Il delivery resta sempre l'asso nella manica."],
@@ -261,7 +261,7 @@ const DAYS = [
       desc: { it: "A 250 m dalla Nau (anche a piedi), apre alle 7: uova benedict, French toast, smoothie bowl. Alternativa zero-spostamenti: GoFood in villa.", en: "250 m from Nau (walkable), opens at 7: eggs benedict, French toast, smoothie bowls. Zero-effort alternative: GoFood at the villa.", zh: "距Nau仅250米（可步行），7点营业：班尼迪克蛋、法式吐司、思慕雪碗。省事之选：别墅点GoFood外卖。" }, places: [P("Capung Coffee", "Capung Coffee and eatery Tegallalang")] },
     { t: "10:00", icon: "🚗", title: { it: "Partenza verso est (~1h30)", en: "Departure east (~1h30)", zh: "向东出发 (~1.5小时)" },
       desc: { it: "Arrivo a Padangbai ~11:30, con margine sullo slot delle 12. Pastiglia anti-nausea verso le 11:00 (30–60 min prima della barca).", en: "Arrival in Padangbai ~11:30, with margin before the 12:00 slot. Anti-nausea tablet around 11:00 (30–60 min before the boat).", zh: "约11:30抵达帕当拜，距12点预约留有余量。11点左右服用晕船药（上船前30–60分钟）。" } },
-    { t: "12:00", icon: "🤿", title: { it: "Snorkeling · Lagonara Tours (prenotato ✅)", en: "Snorkeling · Lagonara Tours (booked ✅)", zh: "浮潜 · Lagonara Tours（已预订 ✅）" },
+    { t: "12:00", icon: "🤿", title: { it: "Snorkeling · Lagonara Tours", en: "Snorkeling · Lagonara Tours", zh: "浮潜 · Lagonara Tours" },
       desc: { it: "Barca privata + guida, 2 ore: Blue Lagoon + Tanjung Jepun. Il Blue Lagoon è a 5 min dal molo; con la barca privata si può restare solo lì se il mare disturba. Gomme allo zenzero, Sea-Band, orizzonte.", en: "Private boat + guide, 2 hours: Blue Lagoon + Tanjung Jepun. Blue Lagoon is 5 min from the pier; with a private boat it's fine to stay there only if the sea bothers. Ginger gum, Sea-Bands, watch the horizon.", zh: "私人船只+向导，2小时：蓝湖+Tanjung Jepun。蓝湖距码头仅5分钟；包船可视情况只留在蓝湖。备好姜糖、防晕手环，多看地平线。" }, places: [P("Blue Lagoon", "Blue Lagoon Beach Padangbai"), P("Tanjung Jepun", "Tanjung Jepun Padangbai")] },
     { t: "14:00", icon: "🐟", title: { it: "Pranzo a Padangbai", en: "Lunch in Padangbai", zh: "帕当拜午餐" },
       desc: { it: "Warung Bu Jero o Warung Sari Laut (pesce grigliato freschissimo, vista porto) · Mama Salty (tranquillo).", en: "Warung Bu Jero or Warung Sari Laut (super-fresh grilled fish, harbour view) · Mama Salty (quiet).", zh: "Warung Bu Jero或Warung Sari Laut（新鲜烤鱼，海港景观）· Mama Salty（安静）。" }, places: [P("Warung Bu Jero", "Warung Bu Jero Padangbai"), P("Warung Sari Laut", "Warung Sari Laut Padangbai"), P("Mama Salty", "Mama Salty Padangbai")] },
@@ -312,8 +312,8 @@ const DAYS = [
     { t: "13:15", icon: "🚗", title: { it: "Trasferimento al Mahajiva (~45 min)", en: "Transfer to Mahajiva (~45 min)", zh: "前往Mahajiva (~45分钟)" }, desc: { it: "", en: "", zh: "" } },
     { t: "14:00", icon: "🏊", title: { it: "Check-in + piscina nelle ore calde (14–17)", en: "Check-in + pool through the hot hours (14–17)", zh: "入住 + 炎热时段泳池休息 (14–17点)" },
       desc: { it: "Doccia, riposo, si arriva freschi alla sera.", en: "Shower, rest, arriving fresh for the evening.", zh: "洗漱休息，以最佳状态迎接夜晚。" }, places: [P("Mahajiva", "Mahajiva Villa Sibang Kaja Ubud")] },
-    { t: "18:45", icon: "🥂", title: { it: "CENA ROMANTICA · Arcadia", en: "ROMANTIC DINNER · Arcadia", zh: "浪漫晚餐 · Arcadia" },
-      desc: { it: "Fine dining nella giungla (~25 min): menù degustazione \"The Arcadia\", musica dal vivo soft. Prenotare via WhatsApp segnalando l'occasione speciale: sono noti per servizio e piccole sorprese. Rientro ~21:00–21:30.", en: "Fine dining in the jungle (~25 min): \"The Arcadia\" tasting menu, soft live music. Book via WhatsApp mentioning the special occasion: known for service and small surprises. Back ~21:00–21:30.", zh: "丛林精致餐厅（约25分钟车程）：\"The Arcadia\"品鉴菜单，轻柔现场音乐。通过WhatsApp预订并注明特殊纪念日：以贴心服务和小惊喜著称。约21:00–21:30返回。" }, places: [P("Arcadia", "Arcadia Ubud restaurant")] },
+    { t: "19:30", icon: "🥂", title: { it: "CENA ROMANTICA · Arcadia", en: "ROMANTIC DINNER · Arcadia", zh: "浪漫晚餐 · Arcadia" },
+      desc: { it: "Fine dining nella giungla (~25 min dal Mahajiva), musica dal vivo soft. Tavolo per 2 alle 19:30, pacchetto Romantic Dinner. Rientro ~22:00.", en: "Fine dining in the jungle (~25 min from Mahajiva), soft live music. Table for 2 at 19:30, Romantic Dinner package. Back ~22:00.", zh: "丛林精致餐厅（距Mahajiva约25分钟），轻柔现场音乐。19:30两人桌，Romantic Dinner套餐。约22:00返回。" }, places: [P("Arcadia", "Arcadia Ubud restaurant")] },
   ],
   notes: {
     it: ["Caricare i bagagli in auto al check-out evita di tornare alla Nau dopo pranzo (~25 min risparmiati)."],
@@ -406,15 +406,15 @@ const DAYS = [
 {
   num: 8,
   date: { it: "Lunedì 27 luglio", en: "Monday 27 July", zh: "7月27日 星期一" },
-  title: { it: "Suluban Beach + tramonto + Akasa", en: "Suluban Beach + sunset + Akasa", zh: "苏鲁班海滩+日落+Akasa" },
+  title: { it: "Suluban Beach + tramonto + Flower Bud", en: "Suluban Beach + sunset + Flower Bud", zh: "苏鲁班海滩+日落+Flower Bud" },
   area: { it: "Balangan / Uluwatu", en: "Balangan / Uluwatu", zh: "巴兰甘 / 乌鲁瓦图" },
   hotel: "Bombora Balangan Resort",
   hotelMap: gm("Bombora Balangan Resort"),
   grad: ["#16261D", "#FF7A48"], emoji: "🏄",
   intro: {
-    it: "L'ultima base, sul mare. Nel pomeriggio la spiaggia-grotta di Suluban con la marea giusta, poi tramonto dalla falesia e cena elegante ad Akasa.",
-    en: "The final base, by the sea. In the afternoon Suluban's cave beach at the right tide, then a clifftop sunset and an elegant dinner at Akasa.",
-    zh: "最后一站，海边。下午趁低潮探索苏鲁班洞穴海滩，随后悬崖日落，晚上在Akasa享用精致晚餐。"
+    it: "L'ultima base, sul mare. Nel pomeriggio la spiaggia-grotta di Suluban con la marea giusta, poi tramonto dalla falesia e cena al Flower Bud, su Balangan.",
+    en: "The final base, by the sea. In the afternoon Suluban's cave beach at the right tide, then a clifftop sunset and dinner at Flower Bud, on Balangan.",
+    zh: "最后一站，海边。下午趁低潮探索苏鲁班洞穴海滩，随后悬崖日落，晚上在巴兰甘的Flower Bud用餐。"
   },
   timeline: [
     { t: "9:00", icon: "☕", title: { it: "Colazione in villa (inclusa), mattinata lenta", en: "Breakfast at the villa (included), slow morning", zh: "别墅早餐（含），慵懒的上午" }, desc: { it: "", en: "", zh: "" } },
@@ -431,8 +431,8 @@ const DAYS = [
     { t: "16:45", icon: "🍹", title: { it: "Drink al Delphi Cafe + tramonto (~18:10)", en: "Drink at Delphi Cafe + sunset (~18:10)", zh: "Delphi Cafe小酌+日落 (~18:10)" },
       desc: { it: "Mini beach club su un masso sopra la spiaggia. Suluban guarda a ovest.", en: "Mini beach club perched on a boulder above the beach. Suluban faces west.", zh: "建在海滩巨石上的迷你海滩俱乐部。苏鲁班朝西。" }, places: [P("Delphi Cafe", "Delphi Cafe Uluwatu")] },
     { t: "18:25", icon: "🚗", title: { it: "Rientro al Bombora (~40 min), doccia", en: "Back to Bombora (~40 min), shower", zh: "返回Bombora (~40分钟)，洗漱" }, desc: { it: "", en: "", zh: "" } },
-    { t: "19:45", icon: "🥂", title: { it: "CENA · AKASA (Jumeirah Bali)", en: "DINNER · AKASA (Jumeirah Bali)", zh: "晚餐 · AKASA (Jumeirah Bali)" },
-      desc: { it: "Ristorante del resort Jumeirah sulla scogliera, elegante: smart casual e prenotare. Piano stanchezza: di nuovo Sunset Bar o delivery, e Akasa si sposta a pranzo del G9.", en: "The Jumeirah resort's clifftop restaurant, elegant: smart casual and book ahead. Tiredness plan: Sunset Bar again or delivery, and Akasa moves to Day 9 lunch.", zh: "Jumeirah度假村的悬崖餐厅，格调优雅：着装Smart Casual，需预订。疲劳预案：改回Sunset Bar或点外卖，Akasa顺延至第9天午餐。" }, places: [P("Akasa", "Akasa Jumeirah Bali")] },
+    { t: "19:45", icon: "🥂", title: { it: "CENA · Flower Bud (Balangan)", en: "DINNER · Flower Bud (Balangan)", zh: "晚餐 · Flower Bud（巴兰甘）" },
+      desc: { it: "Ristorante-giardino dei Flower Bud Bungalows, cucina balinese/indonesiana e internazionale, a pochi minuti dal Bombora. Prenotare 2–3 giorni prima (sito/WhatsApp). Riserva: Balangan Sea View, sulla falesia con vista oceano. Piano stanchezza: Sunset Bar o delivery.", en: "The garden restaurant of Flower Bud Bungalows, Balinese/Indonesian and international food, minutes from Bombora. Book 2–3 days ahead (site/WhatsApp). Backup: Balangan Sea View, on the cliff with ocean views. Tiredness plan: Sunset Bar or delivery.", zh: "Flower Bud Bungalows的花园餐厅，巴厘岛/印尼及国际菜式，距Bombora仅几分钟。提前2–3天预订（官网/WhatsApp）。备选：Balangan Sea View，悬崖海景餐厅。疲劳预案：Sunset Bar或外卖。" }, places: [P("Flower Bud", "Flower Bud Bungalows Balangan"), P("Balangan Sea View", "Balangan Sea View Restaurant Jimbaran")] },
   ],
   notes: {
     it: ["Marea in risalita dalle 14: grotta e Blue Point restano godibilissimi; il varco verso la spiaggia nascosta va passato solo se chiaramente asciutto — mai restare oltre il varco con marea che sale.", "Niente bagno (correnti, zona surf): esplorare e sguazzare dove è basso.", "Sandali con grip, dry bag; il varco richiede di abbassarsi.", "Al parcheggio di Suluban i Grab non possono riprendere i passeggeri: ritorno con autista o taxi chiamato dal bar."],
@@ -440,9 +440,9 @@ const DAYS = [
     zh: ["14点后涨潮：主洞穴和Blue Point依然可尽情游览；通往隐藏海滩的岩缝仅在明显干燥时通过——涨潮时切勿滞留岩缝外侧。", "禁止游泳（暗流，冲浪区）：只在浅水区探索戏水。", "防滑凉鞋、防水袋；过岩缝需弯腰。", "苏鲁班停车场Grab无法接客：返程用包车或请酒吧叫车。"]
   },
   transport: {
-    it: "Transfer mattina: Grab/breve autista (con bagagli). Suluban: autista andata+ritorno concordato. Akasa la sera: Grab breve.",
-    en: "Morning transfer: Grab/short driver leg (with luggage). Suluban: pre-arranged driver both ways. Akasa in the evening: short Grab.",
-    zh: "上午转移：Grab或短途包车（带行李）。苏鲁班：包车往返。晚上Akasa：Grab短途。"
+    it: "Transfer mattina: Grab/breve autista (con bagagli). Suluban: autista andata+ritorno concordato. Cena su Balangan: a piedi o tratta brevissima.",
+    en: "Morning transfer: Grab/short driver leg (with luggage). Suluban: pre-arranged driver both ways. Dinner on Balangan: on foot or a very short hop.",
+    zh: "上午转移：Grab或短途包车（带行李）。苏鲁班：包车往返。晚餐在巴兰甘：步行或极短车程。"
   }
 },
 // ---------------------------------------------------------- DAY 9
@@ -492,14 +492,14 @@ const DAYS = [
   num: 10,
   date: { it: "Mercoledì 29 luglio", en: "Wednesday 29 July", zh: "7月29日 星期三" },
   title: { it: "Partenza", en: "Departure", zh: "启程回国" },
-  area: { it: "Balangan → aeroporto DPS", en: "Balangan → DPS airport", zh: "巴兰甘 → DPS机场" },
-  hotel: "—",
-  hotelMap: gm("Ngurah Rai International Airport"),
+  area: { it: "Balangan → DPS → Shenzhen", en: "Balangan → DPS → Shenzhen", zh: "巴兰甘 → DPS → 深圳" },
+  hotel: "Spring Airlines Hotel (SZX)",
+  hotelMap: gm("Spring Airlines Hotel Shenzhen Airport Branch"),
   grad: ["#16261D", "#2A7F8E"], emoji: "✈️",
   intro: {
-    it: "Ultima mattina con calma e margini larghi in aeroporto: oggi zero esperimenti.",
-    en: "A calm last morning with wide airport margins: zero experiments today.",
-    zh: "最后一个从容的早晨，机场时间留足余量：今天不冒任何险。"
+    it: "Ultima mattina con calma e margini larghi in aeroporto: oggi zero esperimenti. All'arrivo a Shenzhen, notte allo Spring Airlines Hotel e decompressione fino alle 16 del giorno dopo.",
+    en: "A calm last morning with wide airport margins: zero experiments today. On arrival in Shenzhen, a night at the Spring Airlines Hotel and decompression until 16:00 the next day.",
+    zh: "最后一个从容的早晨，机场时间留足余量：今天不冒任何险。抵达深圳后入住春秋航空酒店，次日16点前放松调整。"
   },
   groups: { fly: { it: "✈️ Bali → Shenzhen · MH850 + MH522", en: "✈️ Bali → Shenzhen · MH850 + MH522", zh: "✈️ 巴厘岛 → 深圳 · MH850 + MH522" } },
   timeline: [
@@ -519,7 +519,13 @@ const DAYS = [
     { t: "21:05", icon: "✈️", grp: "fly", title: { it: "Volo MH522 · Kuala Lumpur → Shenzhen", en: "Flight MH522 · Kuala Lumpur → Shenzhen", zh: "航班 MH522 · 吉隆坡 → 深圳" },
       desc: { it: "Boeing 737 MAX 8, ~4h10.", en: "Boeing 737 MAX 8, ~4h10.", zh: "波音737 MAX 8，约4小时10分。" }, flightStatus: "https://www.flightradar24.com/data/flights/mh522" },
     { t: "01:15", icon: "🛬", grp: "fly", title: { it: "Arrivo a Shenzhen (SZX · T3)", en: "Arrival in Shenzhen (SZX · T3)", zh: "抵达深圳 (SZX · T3)" },
-      desc: { it: "01:15 di giovedì 30 lug (+1 giorno). Fine del viaggio.", en: "01:15 on Thursday 30 Jul (+1 day). End of the trip.", zh: "7月30日 星期四 凌晨01:15（+1天）。旅程结束。" }, places: [P("Aeroporto SZX", "Shenzhen Bao'an International Airport")] },
+      desc: { it: "01:15 di giovedì 30 lug (+1 giorno).", en: "01:15 on Thursday 30 Jul (+1 day).", zh: "7月30日 星期四 凌晨01:15（+1天）。" }, places: [P("Aeroporto SZX", "Shenzhen Bao'an International Airport")] },
+    { t: "02:00", icon: "🏨", title: { it: "Check-in · Spring Airlines Hotel", en: "Check-in · Spring Airlines Hotel", zh: "入住 · 春秋航空酒店" },
+      desc: { it: "Hotel in zona aeroporto, notte 29–30 lug. Arrivo in tarda notte (~02:00–02:30) previsto; check-out concordato alle 16:00.", en: "Airport-area hotel, night of 29–30 Jul. Late-night arrival (~02:00–02:30) expected; check-out agreed at 16:00.", zh: "机场附近酒店，7月29–30日一晚。深夜抵达（约02:00–02:30）已安排；退房时间协商为16:00。" }, places: [P("Spring Airlines Hotel", "Spring Airlines Hotel Shenzhen Airport Branch")] },
+    { t: "—", icon: "🛋️", title: { it: "30 lug · Decompressione in hotel", en: "30 Jul · Decompression at the hotel", zh: "7月30日 · 酒店放松调整" },
+      desc: { it: "Colazione e pranzo con delivery in camera, riposo, nessun programma.", en: "Breakfast and lunch delivered to the room, rest, no plans.", zh: "早餐和午餐点外卖送房，休息，无任何安排。" } },
+    { t: "15:45", icon: "🧳", title: { it: "Check-out e rientro a casa", en: "Check-out and home", zh: "退房回家" },
+      desc: { it: "Check-out entro le 16:00 concordate. Fine del viaggio.", en: "Check-out by the agreed 16:00. End of the trip.", zh: "在协商的16:00前退房。旅程结束。" } },
   ],
   notes: {
     it: ["Transfer prenotato il giorno prima (villa o autista di fiducia). Niente Grab con le valigie e un volo da prendere."],
@@ -554,7 +560,7 @@ const PACKING = {
       "Repellente zanzare (sera, soprattutto a Ubud)",
     ]},
     { h: "Abbigliamento", items: [
-      "Tutto leggero e traspirante; un capo smart casual a testa (Akasa/Arcadia/Oliverra)",
+      "Tutto leggero e traspirante; un capo smart casual a testa (Arcadia/Oliverra)",
       "Pareo/sarong leggero (spiaggia, templi, aria condizionata)",
       "Felpa leggera per le sere (a Ubud rinfresca)",
       "Poncho pioggia tascabile",
@@ -588,7 +594,7 @@ const PACKING = {
       "Mosquito repellent (evenings, especially Ubud)",
     ]},
     { h: "Clothing", items: [
-      "Everything light and breathable; one smart-casual outfit each (Akasa/Arcadia/Oliverra)",
+      "Everything light and breathable; one smart-casual outfit each (Arcadia/Oliverra)",
       "Light sarong (beach, temples, car AC)",
       "Light jumper for evenings (Ubud cools down)",
       "Pocket rain poncho",
@@ -622,7 +628,7 @@ const PACKING = {
       "驱蚊液（傍晚，尤其乌布）",
     ]},
     { h: "衣物", items: [
-      "全部轻薄透气；每人一套Smart Casual（Akasa/Arcadia/Oliverra用）",
+      "全部轻薄透气；每人一套Smart Casual（Arcadia/Oliverra用）",
       "轻薄纱笼（海滩、神庙、车内空调）",
       "薄外套备晚间（乌布夜晚偏凉）",
       "便携雨披",
@@ -780,6 +786,8 @@ const BOOKINGS = {
       ["Soggiorno", "25 → 27 lug · 2 notti"], ["Check-in / out", "dalle 14:00 / entro le 12:00"], ["Colazione", "Inclusa"], ["Stato", "Prenotato ✓"] ] },
     { cat: "alloggi", s: "🌊", what: "Bombora Balangan Resort", sub: "Balangan (Bukit)", map: gm("Bombora Balangan Resort"), rows: [
       ["Soggiorno", "27 → 29 lug · 2 notti"], ["Check-in / out", "dalle 14:00 / entro le 12:00"], ["Colazione", "Inclusa"], ["Stato", "Prenotato ✓"] ] },
+    { cat: "alloggi", s: "🌃", what: "Spring Airlines Hotel (Airport Branch)", sub: "Aeroporto di Shenzhen (SZX)", map: gm("Spring Airlines Hotel Shenzhen Airport Branch"), rows: [
+      ["Soggiorno", "29 → 30 lug · 1 notte"], ["Check-in / out", "~02:00–02:30 (arrivo notturno) / 16:00 (concordato)"], ["Colazione", "Delivery in camera (anche pranzo)"], ["Stato", "Prenotato ✓"] ] },
 
     // ---- VOLI (Malaysia Airlines · Shenzhen ⇄ Kuala Lumpur ⇄ Bali) ----
     { cat: "voli", s: "🛫", what: "MH523 · Shenzhen → Kuala Lumpur", rows: [
@@ -792,12 +800,12 @@ const BOOKINGS = {
       ["Data", "Mer 29 lug"], ["Orari", "21:05 → 01:15 +1 (KUL → SZX)"], ["Aereo", "Boeing 737 MAX 8 · ~4h10"], ["Note", "Bagaglio di norma imbarcato fino a destinazione: confermare al check-in"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh522" },
 
     // ---- RISTORANTI ----
-    { cat: "ristoranti", s: "🥂", what: "Arcadia (G5, ~18:45)", rows: [
-      ["Quando", "Appena possibile (spesso caparra)"], ["Come", "WhatsApp — segnalare l'occasione speciale"] ] },
-    { cat: "ristoranti", s: "🍷", what: "Uma Garden (G1, cena ~19:00)", rows: [
-      ["Quando", "Qualche giorno prima"], ["Come", "WhatsApp/sito — tavolo in giardino"] ] },
-    { cat: "ristoranti", s: "🍽️", what: "AKASA – Jumeirah (G8, cena ~19:45)", rows: [
-      ["Quando", "2–3 giorni prima"], ["Come", "Sito/WhatsApp — smart casual"] ] },
+    { cat: "ristoranti", s: "🥂", what: "Arcadia (G5, cena 19:30)", rows: [
+      ["Data", "Ven 24 lug · 19:30"], ["Pacchetto", "Romantic Dinner · 2 persone"], ["Stato", "Prenotato ✓"] ] },
+    { cat: "ristoranti", s: "🍷", what: "Uma Garden (G1, cena 19:00)", rows: [
+      ["Data", "Lun 20 lug · 19:00–21:00"], ["Tavolo", "2 persone · sala interna (aria condizionata)"], ["Riferimento", "06485437"], ["Note", "Tavolo tenuto 15 min: avvisare in caso di ritardo"], ["Stato", "Prenotato ✓"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Flower Bud (G8, cena ~19:45)", rows: [
+      ["Quando", "2–3 giorni prima"], ["Come", "Sito flowerbudbalangan.com o WhatsApp"], ["Riserva", "Balangan Sea View (walk-in o tel. +62 858 5710 2667)"] ] },
     { cat: "ristoranti", s: "🍽️", what: "Oliverra (G6, ~19:00; riserva WAATU)", rows: [
       ["Quando", "2–3 giorni prima"], ["Come", "WhatsApp/Instagram"] ] },
     { cat: "ristoranti", s: "🌅", what: "El Kabron (G9, se scelto)", rows: [
@@ -810,10 +818,6 @@ const BOOKINGS = {
       ["Quando", "Qualche giorno prima della partenza"], ["Come", "WhatsApp — \"Balinese Couple Massage\""] ] },
     { cat: "attivita", s: "🛟", what: "Floating breakfast alla Nau (G5, 8:30)", rows: [
       ["Quando", "Al check-in alla Nau (G3) o prima"], ["Come", "Direttamente con la villa (a pagamento)"] ] },
-    { cat: "attivita", s: "🏖️", what: "Sundays (G7)", rows: [
-      ["Quando", "Non prenotabile (solo VIP)"], ["Come", "Posti first-come → arrivare alle 10:00"] ] },
-    { cat: "attivita", s: "🌊", what: "Verifica maree (G8 Suluban, G9 Tegal Wangi)", rows: [
-      ["Quando", "Qualche giorno prima + il giorno stesso"], ["Come", "App maree (Tide Charts) o sundaysbeachclub.com/bali-tide-chart"] ] },
 
     // ---- TRASPORTI ----
     { cat: "trasporti", s: "✈️", what: "Transfer aeroporto (G1 e G10)", rows: [
@@ -836,6 +840,8 @@ const BOOKINGS = {
       ["Stay", "25 → 27 Jul · 2 nights"], ["Check-in / out", "from 14:00 / by 12:00"], ["Breakfast", "Included"], ["Status", "Booked ✓"] ] },
     { cat: "alloggi", s: "🌊", what: "Bombora Balangan Resort", sub: "Balangan (Bukit)", map: gm("Bombora Balangan Resort"), rows: [
       ["Stay", "27 → 29 Jul · 2 nights"], ["Check-in / out", "from 14:00 / by 12:00"], ["Breakfast", "Included"], ["Status", "Booked ✓"] ] },
+    { cat: "alloggi", s: "🌃", what: "Spring Airlines Hotel (Airport Branch)", sub: "Shenzhen Airport (SZX)", map: gm("Spring Airlines Hotel Shenzhen Airport Branch"), rows: [
+      ["Stay", "29 → 30 Jul · 1 night"], ["Check-in / out", "~02:00–02:30 (late-night arrival) / 16:00 (agreed)"], ["Breakfast", "Room delivery (lunch too)"], ["Status", "Booked ✓"] ] },
 
     // ---- FLIGHTS ----
     { cat: "voli", s: "🛫", what: "MH523 · Shenzhen → Kuala Lumpur", rows: [
@@ -848,12 +854,12 @@ const BOOKINGS = {
       ["Date", "Wed 29 Jul"], ["Times", "21:05 → 01:15 +1 (KUL → SZX)"], ["Aircraft", "Boeing 737 MAX 8 · ~4h10"], ["Note", "Luggage usually checked through to destination: confirm at check-in"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh522" },
 
     // ---- RESTAURANTS ----
-    { cat: "ristoranti", s: "🥂", what: "Arcadia (D5, ~18:45)", rows: [
-      ["When", "As soon as possible (deposit likely)"], ["How", "WhatsApp — mention the special occasion"] ] },
-    { cat: "ristoranti", s: "🍷", what: "Uma Garden (D1, dinner ~19:00)", rows: [
-      ["When", "A few days ahead"], ["How", "WhatsApp/site — garden table"] ] },
-    { cat: "ristoranti", s: "🍽️", what: "AKASA – Jumeirah (D8, dinner ~19:45)", rows: [
-      ["When", "2–3 days ahead"], ["How", "Site/WhatsApp — smart casual"] ] },
+    { cat: "ristoranti", s: "🥂", what: "Arcadia (D5, dinner 19:30)", rows: [
+      ["Date", "Fri 24 Jul · 19:30"], ["Package", "Romantic Dinner · 2 guests"], ["Status", "Booked ✓"] ] },
+    { cat: "ristoranti", s: "🍷", what: "Uma Garden (D1, dinner 19:00)", rows: [
+      ["Date", "Mon 20 Jul · 19:00–21:00"], ["Table", "2 guests · indoor dining (air-conditioned area)"], ["Reference", "06485437"], ["Note", "Table held 15 min: advise if running late"], ["Status", "Booked ✓"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Flower Bud (D8, dinner ~19:45)", rows: [
+      ["When", "2–3 days ahead"], ["How", "Site flowerbudbalangan.com or WhatsApp"], ["Backup", "Balangan Sea View (walk-in or tel. +62 858 5710 2667)"] ] },
     { cat: "ristoranti", s: "🍽️", what: "Oliverra (D6, ~19:00; WAATU backup)", rows: [
       ["When", "2–3 days ahead"], ["How", "WhatsApp/Instagram"] ] },
     { cat: "ristoranti", s: "🌅", what: "El Kabron (D9, if chosen)", rows: [
@@ -866,10 +872,6 @@ const BOOKINGS = {
       ["When", "A few days before departure"], ["How", "WhatsApp — \"Balinese Couple Massage\""] ] },
     { cat: "attivita", s: "🛟", what: "Floating breakfast at Nau (D5, 8:30)", rows: [
       ["When", "At Nau check-in (D3) or earlier"], ["How", "Directly with the villa (paid)"] ] },
-    { cat: "attivita", s: "🏖️", what: "Sundays (D7)", rows: [
-      ["When", "Not bookable (VIP only)"], ["How", "First-come seating → arrive at 10:00"] ] },
-    { cat: "attivita", s: "🌊", what: "Tide check (D8 Suluban, D9 Tegal Wangi)", rows: [
-      ["When", "A few days ahead + same day"], ["How", "Tide app (Tide Charts) or sundaysbeachclub.com/bali-tide-chart"] ] },
 
     // ---- TRANSPORT ----
     { cat: "trasporti", s: "✈️", what: "Airport transfers (D1 and D10)", rows: [
@@ -892,6 +894,8 @@ const BOOKINGS = {
       ["入住时段", "7月25 → 27日 · 2晚"], ["入住 / 退房", "14:00起 / 12:00前"], ["早餐", "含"], ["状态", "已预订 ✓"] ] },
     { cat: "alloggi", s: "🌊", what: "Bombora Balangan Resort", sub: "巴兰甘（布吉）", map: gm("Bombora Balangan Resort"), rows: [
       ["入住时段", "7月27 → 29日 · 2晚"], ["入住 / 退房", "14:00起 / 12:00前"], ["早餐", "含"], ["状态", "已预订 ✓"] ] },
+    { cat: "alloggi", s: "🌃", what: "春秋航空酒店（机场店）", sub: "深圳宝安机场 (SZX)", map: gm("Spring Airlines Hotel Shenzhen Airport Branch"), rows: [
+      ["入住时段", "7月29 → 30日 · 1晚"], ["入住 / 退房", "约02:00–02:30（深夜抵达）/ 16:00（已协商）"], ["早餐", "外卖送房（午餐同）"], ["状态", "已预订 ✓"] ] },
 
     // ---- 航班 ----
     { cat: "voli", s: "🛫", what: "MH523 · 深圳 → 吉隆坡", rows: [
@@ -904,12 +908,12 @@ const BOOKINGS = {
       ["日期", "7月29日 周三"], ["时间", "21:05 → 01:15 +1 (KUL → SZX)"], ["机型", "波音737 MAX 8 · 约4小时10分"], ["备注", "行李通常直挂目的地：值机时确认"] ], flightStatus: "https://www.flightradar24.com/data/flights/mh522" },
 
     // ---- 餐厅 ----
-    { cat: "ristoranti", s: "🥂", what: "Arcadia（第5天，约18:45）", rows: [
-      ["时间", "尽快（通常需订金）"], ["方式", "WhatsApp——注明特殊纪念日"] ] },
-    { cat: "ristoranti", s: "🍷", what: "Uma Garden（第1天，晚餐约19:00）", rows: [
-      ["时间", "提前几天"], ["方式", "WhatsApp/官网——花园座位"] ] },
-    { cat: "ristoranti", s: "🍽️", what: "AKASA – Jumeirah（第8天，晚餐约19:45）", rows: [
-      ["时间", "提前2–3天"], ["方式", "官网/WhatsApp——Smart Casual着装"] ] },
+    { cat: "ristoranti", s: "🥂", what: "Arcadia（第5天，晚餐19:30）", rows: [
+      ["日期", "7月24日 周五 · 19:30"], ["套餐", "Romantic Dinner · 2人"], ["状态", "已预订 ✓"] ] },
+    { cat: "ristoranti", s: "🍷", what: "Uma Garden（第1天，晚餐19:00）", rows: [
+      ["日期", "7月20日 周一 · 19:00–21:00"], ["座位", "2人 · 室内用餐区（空调）"], ["预订编号", "06485437"], ["备注", "座位保留15分钟：迟到请提前告知"], ["状态", "已预订 ✓"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Flower Bud（第8天，晚餐约19:45）", rows: [
+      ["时间", "提前2–3天"], ["方式", "官网 flowerbudbalangan.com 或 WhatsApp"], ["备选", "Balangan Sea View（可直接前往或致电 +62 858 5710 2667）"] ] },
     { cat: "ristoranti", s: "🍽️", what: "Oliverra（第6天，约19:00；备选WAATU）", rows: [
       ["时间", "提前2–3天"], ["方式", "WhatsApp/Instagram"] ] },
     { cat: "ristoranti", s: "🌅", what: "El Kabron（第9天，若选择）", rows: [
@@ -922,10 +926,6 @@ const BOOKINGS = {
       ["时间", "出发前几天"], ["方式", "WhatsApp——\"巴厘岛双人按摩\""] ] },
     { cat: "attivita", s: "🛟", what: "Nau漂浮早餐（第5天，8:30）", rows: [
       ["时间", "第3天入住时或更早"], ["方式", "直接向别墅预订（收费）"] ] },
-    { cat: "attivita", s: "🏖️", what: "Sundays（第7天）", rows: [
-      ["时间", "不可预订（仅VIP区）"], ["方式", "先到先得→10:00到达"] ] },
-    { cat: "attivita", s: "🌊", what: "查潮汐（第8天苏鲁班，第9天Tegal Wangi）", rows: [
-      ["时间", "提前几天+当天"], ["方式", "潮汐App（Tide Charts）或 sundaysbeachclub.com/bali-tide-chart"] ] },
 
     // ---- 交通 ----
     { cat: "trasporti", s: "✈️", what: "机场接送（第1天和第10天）", rows: [

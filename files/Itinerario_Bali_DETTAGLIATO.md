@@ -111,7 +111,7 @@ Oggi cambiate villa, ma la mattinata è tutta locale e breve (Alas Harum e Tis C
 - **🍽️ ~12:00 — Pranzo al Tis Cafe** (2 min): terrazza all'ombra sulle risaie, proprio nell'ora più calda.
 - **~13:15 — Trasferimento al Mahajiva** (Ubud sud, ~45 min).
 - **~14:00–14:15 — check-in Mahajiva**, poi **piscina / doccia / riposo nella fascia 14–17** (la più calda: passatela al fresco).
-- **🥂 ~18:45 — CENA ROMANTICA ad Arcadia (Ubud)** (~25 min dal Mahajiva): fine dining nella giungla, menù degustazione "The Arcadia", musica dal vivo soft. **Prenota via WhatsApp e segnala che è un'occasione speciale**: sono noti per servizio e piccole sorprese. Rientro ~21:00–21:30.
+- **🥂 19:30 — CENA ROMANTICA ad Arcadia (Ubud)** (~25 min dal Mahajiva): fine dining nella giungla, musica dal vivo soft. ✅ *Prenotato: tavolo per 2 alle 19:30, pacchetto Romantic Dinner.* Rientro ~22:00.
 
 **🚗 Trasporto oggi**: **autista** per la mattina (Nau → Alas Harum/Tis → Mahajiva, vi aspetta tra le tappe; al ritorno non trovereste Grab facilmente), bagagli in auto con lui. Cena ad Arcadia: stesso autista o **Grab** (a Ubud centro funziona).
 
@@ -151,7 +151,7 @@ Oggi cambiate villa, ma la mattinata è tutta locale e breve (Alas Harum e Tis C
 
 **🚗 Trasporto oggi**: **Grab** all'andata (~16 min); ritorno serale = taxi chiamato dal club o autista concordato.
 
-## **Giorno 8 — Lun 27 lug — Suluban Beach (grotte) + tramonto dalla falesia + cena ad Akasa** · *Bombora Balangan Resort*
+## **Giorno 8 — Lun 27 lug — Suluban Beach (grotte) + tramonto dalla falesia + cena al Flower Bud** · *Bombora Balangan Resort*
 
 **Come si svolge la giornata**
 - **Colazione in villa (inclusa)** a Nunamkhalu, mattinata lenta.
@@ -161,7 +161,7 @@ Oggi cambiate villa, ma la mattinata è tutta locale e breve (Alas Harum e Tis C
 - **🕳️ 14:45 → ~15:30 — Suluban Beach (Blue Point)** (~40 min di strada in alta stagione): la spiaggia-grotta sotto le falesie di Uluwatu. Si scende una scalinata di ~100 gradini (~10 min) tra bar e botteghe con viste sul surf break, si sbuca nella **grande grotta** tra le pareti a picco, acqua turchese, surfisti che entrano ed escono. Esplorazione con calma ~1h–1h15.
 - **🍹 ~16:45 — risalita e drink al Delphi Cafe** (mini beach club costruito su un masso sopra la spiaggia, vista pazzesca) → **🌅 ~18:10 tramonto dalla falesia** (Suluban guarda a ovest: è uno dei sunset migliori del Bukit).
 - **🚗 18:25 → ~19:00 — rientro al Bombora** (~40 min), doccia.
-- **🍷 ~19:45–20:00 — CENA ad AKASA (Jumeirah Bali)** (~15 min): ristorante del resort Jumeirah sulla scogliera, elegante — smart casual e **prenotate**. *Piano stanchezza: se a fine giornata siete distrutti, di nuovo Sunset Bar o delivery in camera, e Akasa si sposta a pranzo del G9.*
+- **🍷 ~19:45–20:00 — CENA al Flower Bud (Balangan)**: ristorante-giardino dei Flower Bud Bungalows, cucina balinese/indonesiana e internazionale, a pochi minuti dal Bombora — **prenotare 2–3 giorni prima** (sito flowerbudbalangan.com o WhatsApp). *Riserva: **Balangan Sea View**, sulla falesia con vista oceano (walk-in o telefono). Piano stanchezza: se a fine giornata siete distrutti, di nuovo Sunset Bar o delivery in camera.*
 
 > 🌊 **Note marea & sicurezza (importanti)**
 > - Bassa marea stimata il 27/7: **~14:00** (a ridosso della luna piena del 29/7 = basse maree "forti"). **Verificate l'orario esatto qualche giorno prima** su un'app maree (es. Tide Charts) o sul sito di Sundays (bali tide chart).
@@ -169,7 +169,7 @@ Oggi cambiate villa, ma la mattinata è tutta locale e breve (Alas Harum e Tis C
 > - **Niente bagno** (correnti forti, zona surf): si esplora e si sguazza dove è basso.
 > - **Sandali/scarpe con grip** (rocce scivolose), **dry bag** per il telefono; il varco richiede di abbassarsi.
 
-**🚗 Trasporto oggi**: transfer mattina = **Grab**/breve autista (con bagagli). Suluban = **autista** andata+ritorno concordato (o Grab all'andata + taxi chiamato dal bar al ritorno: la sera lì i Grab scarseggiano — e i driver Grab non possono riprendervi al parcheggio). Akasa la sera = Grab breve.
+**🚗 Trasporto oggi**: transfer mattina = **Grab**/breve autista (con bagagli). Suluban = **autista** andata+ritorno concordato (o Grab all'andata + taxi chiamato dal bar al ritorno: la sera lì i Grab scarseggiano — e i driver Grab non possono riprendervi al parcheggio). Cena su Balangan = a piedi o tratta brevissima.
 
 ## **Giorno 9 — Mar 28 lug — Relax + snorkeling di riserva (giorno cuscinetto)** · *Bombora Balangan*
 È il **giorno libero/cuscinetto**: il posto giusto per la carta di riserva se a Padangbai (G4) lo snorkeling è saltato per il ciclo. Se non vi va, resta semplicemente una giornata di relax — o le fate entrambe.
@@ -202,7 +202,9 @@ Oggi cambiate villa, ma la mattinata è tutta locale e breve (Alas Harum e Tis C
 - **~12:00 — pranzo leggero e presto** al Sunset Bar o in zona (meglio mangiare prima di partire: in aeroporto si mangia male e caro).
 - **🚗 ~12:45–13:00 — partenza per l'aeroporto** (~25–30 min, ma a Bali il traffico è imprevedibile: questo margine assorbe anche un intoppo).
 - **~13:30 — arrivo in aeroporto (DPS, Terminal Internazionale)** → **3 ore prima del volo**: la finestra consigliata per i voli internazionali in alta stagione. Il check-in Malaysia Airlines **chiude 60 min prima** della partenza: con questo piano avete un cuscino enorme anche se c'è coda al banco o all'immigrazione.
-- **✈️ 16:25 — decollo MH850** per Kuala Lumpur, poi MH522 per Shenzhen alle 21:05 (scalo di ~2h05: comodo, e il bagaglio di norma è imbarcato fino a destinazione — confermatelo al check-in).
+- **✈️ 16:25 — decollo MH850** per Kuala Lumpur (arrivo 19:35), poi MH522 per Shenzhen alle 21:05 (scalo di ~1h30; il bagaglio di norma è imbarcato fino a destinazione — confermatelo al check-in).
+- **🛬 ~01:15 (gio 30 lug) — atterraggio a Shenzhen (SZX · T3)** → check-in allo **Spring Airlines Hotel Shenzhen Airport Branch** (notte 29–30; arrivo notturno ~02:00–02:30 previsto).
+- **🛋️ 30 lug — decompressione in hotel**: colazione e pranzo con delivery in camera, riposo, nessun programma. **Check-out concordato alle 16:00**, poi rientro a casa.
 
 **🚗 Trasporto oggi**: transfer privato con bagagli (IDR 150–250k), **prenotato il giorno prima** (villa o autista di fiducia). Niente Grab con le valigie e un volo da prendere: oggi zero esperimenti.
 
@@ -228,12 +230,12 @@ Ogni giornata ha **una sola cosa principale** + relax: se ne salta una, sposti l
 | Cosa | Quando prenotare | Come |
 |---|---|---|
 | ✅ **Lagonara Snorkeling** (G4, 12:00, barca privata 2h) | *Fatto* | WhatsApp — 📲 riconferma condizioni mare la sera del 22/7 |
-| 🥂 **Arcadia** (G5, ~18:45) | **Appena possibile** (chiedono spesso caparra) | WhatsApp — segnalare occasione speciale |
+| 🥂 **Arcadia** (G5, cena 19:30) | ✅ *Fatto* | Pacchetto Romantic Dinner, tavolo per 2 alle 19:30 |
 | 🛟 **Floating breakfast alla Nau** (G5, 8:30) | Al check-in alla Nau (G3) o via messaggio prima | Direttamente con la villa (a pagamento) |
 | 💆 **Svaha Spa Umalas** (G1, ~16:00) | Qualche giorno prima della partenza | WhatsApp — "Balinese Couple Massage" |
 | 🍷 **Uma Garden** (G1, cena ~19:00) | Qualche giorno prima | WhatsApp/sito — chiedere tavolo in giardino |
 | 🌊 **Verifica maree** (G8 Suluban, G9 Tegal Wangi) | Qualche giorno prima, poi il giorno stesso | App maree (Tide Charts) o sundaysbeachclub.com/bali-tide-chart |
-| 🍽️ **AKASA – Jumeirah Bali** (G8, CENA ~19:45–20:00) | 2–3 giorni prima | Sito/WhatsApp — dress code smart casual |
+| 🍽️ **Flower Bud** (G8, CENA ~19:45–20:00) | 2–3 giorni prima | Sito flowerbudbalangan.com o WhatsApp; riserva: Balangan Sea View (walk-in o tel.) |
 | 🍽️ **Oliverra** (G6, ~19:00; riserva WAATU) | 2–3 giorni prima | WhatsApp/Instagram |
 | 🌅 **El Kabron** (G9, *se scelto*) | 2–3 giorni prima | Restaurant Area = tavolo normale (sito "Book Now" o Chope); Sunset Theater = posto a pagamento. Non rimborsabile, +10% servizio +10% tasse |
 | ✈️ **Transfer aeroporto** (G1 arrivo, G10 partenza) | Prima della partenza | Villa o servizio transfer |
@@ -282,7 +284,7 @@ Ogni giornata ha **una sola cosa principale** + relax: se ne salta una, sposti l
 - [ ] Repellente zanzare (sera, soprattutto a Ubud)
 
 **Abbigliamento**
-- [ ] Tutto leggero e traspirante; un **capo smart casual** a testa per Akasa/Arcadia/Oliverra
+- [ ] Tutto leggero e traspirante; un **capo smart casual** a testa per Arcadia/Oliverra
 - [ ] **Pareo/sarong leggero** (utile ovunque: spiaggia, templi, aria condizionata in auto)
 - [ ] Felpa leggera per le sere (a Ubud e in collina rinfresca)
 - [ ] Poncho pioggia tascabile (stagione secca, ma un rovescio ci sta sempre)
