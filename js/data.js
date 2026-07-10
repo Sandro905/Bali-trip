@@ -336,33 +336,37 @@ const DAYS = [
   hotelMap: gm("Nunamkhalu Private Villa and Spa Nusa Dua"),
   grad: ["#1F5137", "#FF7A48"], emoji: "🏝️",
   intro: {
-    it: "Dalla giungla al mare: pranzo farm-to-table a due passi dal Mahajiva, poi il grande sud. Pomeriggio e sera aperti, con un menù di idee pronte.",
-    en: "From jungle to sea: farm-to-table lunch steps from Mahajiva, then the deep south. Afternoon and evening open, with a menu of ready ideas.",
-    zh: "从丛林到大海：Mahajiva旁的农场餐厅午餐，随后南下。下午和晚上自由安排，备有多个现成方案。"
+    it: "Dalla giungla al mare: pranzo farm-to-table a due passi dal Mahajiva, poi il grande sud — Pandawa Beach con la navetta della villa e cena da Oliverra.",
+    en: "From jungle to sea: farm-to-table lunch steps from Mahajiva, then the deep south — Pandawa Beach via the villa shuttle and dinner at Oliverra.",
+    zh: "从丛林到大海：Mahajiva旁的农场餐厅午餐，随后南下——乘别墅班车前往潘达瓦海滩，晚餐在Oliverra。"
   },
   timeline: [
     { t: "9:00", icon: "☕", title: { it: "Colazione · Taani Farm to Table (o in villa)", en: "Breakfast · Taani Farm to Table (or at the villa)", zh: "早餐 · Taani Farm to Table（或别墅内）" },
       desc: { it: "A 1 min a piedi dal Mahajiva, ristorante in bambù con cucina dall'orto, apre alle 7. In alternativa: delivery GoFood.", en: "1 min on foot from Mahajiva, bamboo restaurant with garden-grown food, opens at 7. Alternative: GoFood delivery.", zh: "距Mahajiva步行1分钟，竹制餐厅，食材来自自家菜园，7点营业。备选：GoFood外卖。" }, places: [P("Taani Farm to Table", "Taani Farm to Table Bali")] },
     { t: "10:00", icon: "🏊", title: { it: "Relax in villa", en: "Villa downtime", zh: "别墅休闲" }, desc: { it: "Piscina, con calma.", en: "Pool, unhurried.", zh: "泳池，不慌不忙。" } },
-    { t: "12:00", icon: "🧳", title: { it: "Check-out + pranzo da Taani", en: "Check-out + lunch at Taani", zh: "退房 + Taani午餐" },
-      desc: { it: "Bagagli lasciati in villa, pranzo a due passi, poi recupero bagagli e partenza.", en: "Luggage left at the villa, lunch steps away, then collect and go.", zh: "行李寄存别墅，就近午餐，然后取行李出发。" } },
+    { t: "12:00", icon: "🧳", title: { it: "Check-out dal Mahajiva", en: "Check-out from Mahajiva", zh: "从Mahajiva退房" },
+      desc: { it: "Bagagli lasciati in villa fino a dopo pranzo.", en: "Luggage left at the villa until after lunch.", zh: "行李寄存别墅至午餐后。" } },
+    { t: "12:15", icon: "🍽️", title: { it: "Pranzo · Taani", en: "Lunch · Taani", zh: "午餐 · Taani" },
+      desc: { it: "A due passi; poi recupero bagagli e partenza.", en: "Steps away; then collect the luggage and go.", zh: "近在咫尺；饭后取行李出发。" }, places: [P("Taani Farm to Table", "Taani Farm to Table Bali")] },
     { t: "13:15", icon: "🚗", title: { it: "Trasferimento al Bukit (~1h30–2h)", en: "Transfer to the Bukit (~1h30–2h)", zh: "前往布吉半岛 (~1.5–2小时)" }, desc: { it: "", en: "", zh: "" } },
     { t: "15:00", icon: "🏡", title: { it: "Check-in a Nunamkhalu", en: "Check-in at Nunamkhalu", zh: "入住Nunamkhalu" },
       desc: { it: "", en: "", zh: "" }, places: [P("Nunamkhalu", "Nunamkhalu Private Villa and Spa Nusa Dua")] },
-    { t: "16:00", icon: "🏖️", title: { it: "Pomeriggio a scelta", en: "Afternoon, pick one", zh: "下午自选" },
-      desc: { it: "Melasti (sabbia bianca tra falesie, strada scenografica scavata nella roccia) o Pandawa (statue nella parete, acqua riparata, warung sulla sabbia) — lettino, bagno, cocco. Oppure snorkeling da riva a Geger Beach (piano B se Padangbai è saltato: attrezzatura ~IDR 50k, si entra dalla riva).", en: "Melasti (white sand between cliffs, scenic rock-cut road) or Pandawa (statues in the cliff wall, sheltered water, sand-side warungs) — sunbed, swim, coconut. Or shore snorkeling at Geger Beach (plan B if Padangbai fell through: gear ~IDR 50k, entry from the shore).", zh: "美拉斯蒂海滩（悬崖间的白沙滩，岩石凿出的景观公路）或潘达瓦海滩（崖壁石像、平静海水、沙滩小馆）——躺椅、游泳、椰子。或到Geger海滩岸边浮潜（若帕当拜未成行的备选：装备约5万印尼盾，从岸边下水）。" }, places: [P("Melasti Beach", "Melasti Beach Ungasan"), P("Pandawa Beach", "Pandawa Beach Bali"), P("Geger Beach", "Geger Beach Nusa Dua")] },
-    { t: "19:00", icon: "🍷", title: { it: "Cena: 1ª scelta Oliverra, 2ª WAATU", en: "Dinner: 1st pick Oliverra, 2nd WAATU", zh: "晚餐：首选Oliverra，次选WAATU" },
-      desc: { it: "Oliverra: mediterraneo vicino a Melasti, romantico. WAATU: su scogliera, elegante. Prenotare in anticipo. Informali: Ohana (pizza), Artisan, Ayu Seafood (andarci presto).", en: "Oliverra: Mediterranean near Melasti, romantic. WAATU: clifftop, elegant. Book ahead. Casual: Ohana (pizza), Artisan, Ayu Seafood (go early).", zh: "Oliverra：美拉斯蒂附近的地中海餐厅，浪漫。WAATU：悬崖之上，优雅。需提前预订。休闲选择：Ohana（披萨）、Artisan、Ayu Seafood（宜早去）。" }, places: [P("Oliverra", "Oliverra Ungasan Bali"), P("WAATU", "WAATU Uluwatu"), P("Ohana", "Ohana Bali Uluwatu"), P("Artisan Ungasan", "Artisan Ungasan"), P("Ayu Seafood", "Ayu Seafood Ungasan")] },
+    { t: "16:00", icon: "🏖️", title: { it: "Pandawa Beach (navetta della villa)", en: "Pandawa Beach (villa shuttle)", zh: "潘达瓦海滩（别墅班车）" },
+      desc: { it: "Statue dei Pandawa scolpite nella parete, acqua riparata e poco profonda, lettini e warung sulla sabbia. Navetta della villa inclusa, andata e ritorno.", en: "Pandawa statues carved into the cliff wall, sheltered shallow water, sunbeds and sand-side warungs. Villa shuttle included, both ways.", zh: "崖壁上雕刻的潘达瓦石像，海水平静且浅，有躺椅和沙滩小馆。别墅含往返班车。" }, places: [P("Pandawa Beach", "Pandawa Beach Bali")] },
+    { t: "18:00", icon: "🚿", title: { it: "Rientro in villa, doccia", en: "Back to the villa, shower", zh: "返回别墅，洗漱" }, desc: { it: "", en: "", zh: "" } },
+    { t: "19:00", icon: "🍷", title: { it: "Cena · Oliverra", en: "Dinner · Oliverra", zh: "晚餐 · Oliverra" },
+      desc: { it: "Mediterraneo vicino a Melasti, romantico. Tavolo per 2 alle 19:00.", en: "Mediterranean near Melasti, romantic. Table for 2 at 19:00.", zh: "美拉斯蒂附近的地中海餐厅，浪漫。19:00两人桌。" }, places: [P("Oliverra", "Oliverra Ungasan Bali")] },
   ],
   notes: {
-    it: ["Anche la caletta di Sundays (G7) offre snorkeling calmo da riva: al sud lo snorkeling è comunque coperto."],
-    en: ["Sundays' cove (D7) also offers calm shore snorkeling: the south has snorkeling covered anyway."],
-    zh: ["Sundays海湾（第7天）同样可从岸边平静浮潜：南部浮潜有保障。"]
+    it: ["Alternative spiaggia: Melasti (sabbia bianca tra alte falesie, strada scenografica scavata nella roccia) · Geger Beach (snorkeling da riva, attrezzatura ~IDR 50k — piano B se Padangbai è saltato).", "Alternative per la cena: WAATU (su scogliera, elegante; prenotare in anticipo) · Ohana (italiano/pizza) · Artisan Ungasan (bistrot) · Ayu Seafood (pesce, andarci presto).", "Anche la caletta di Sundays (G7) offre snorkeling calmo da riva: al sud lo snorkeling è comunque coperto."],
+    en: ["Beach alternatives: Melasti (white sand between tall cliffs, scenic rock-cut road) · Geger Beach (shore snorkeling, gear ~IDR 50k — plan B if Padangbai fell through).", "Dinner alternatives: WAATU (clifftop, elegant; book ahead) · Ohana (Italian/pizza) · Artisan Ungasan (bistro) · Ayu Seafood (seafood, go early).", "Sundays' cove (D7) also offers calm shore snorkeling: the south has snorkeling covered anyway."],
+    zh: ["海滩备选：美拉斯蒂（高耸悬崖间的白沙滩，岩石凿出的景观公路）· Geger海滩（岸边浮潜，装备约5万印尼盾——帕当拜未成行的备选）。", "晚餐备选：WAATU（悬崖之上，优雅；需提前预订）· Ohana（意式/披萨）· Artisan Ungasan（小酒馆）· Ayu Seafood（海鲜，宜早去）。", "Sundays海湾（第7天）同样可从岸边平静浮潜：南部浮潜有保障。"]
   },
+  notesPlaces: [P("Melasti Beach", "Melasti Beach Ungasan"), P("Geger Beach", "Geger Beach Nusa Dua"), P("WAATU", "WAATU Uluwatu"), P("Ohana", "Ohana Bali Uluwatu"), P("Artisan Ungasan", "Artisan Ungasan"), P("Ayu Seafood", "Ayu Seafood Ungasan")],
   transport: {
-    it: "Mattina a piedi (Taani). Trasferimento al Bukit: autista, bagagli a bordo. Poi Grab brevi.",
-    en: "Morning on foot (Taani). Transfer to the Bukit: driver, luggage on board. Then short Grabs.",
-    zh: "上午步行（Taani）。前往布吉半岛：包车带行李。之后短途用Grab。"
+    it: "Mattina a piedi (Taani). Trasferimento al Bukit: autista, bagagli a bordo. Pandawa: navetta della villa inclusa. Cena: Grab breve.",
+    en: "Morning on foot (Taani). Transfer to the Bukit: driver, luggage on board. Pandawa: villa shuttle included. Dinner: short Grab.",
+    zh: "上午步行（Taani）。前往布吉半岛：包车带行李。潘达瓦海滩：别墅含班车。晚餐：Grab短途。"
   }
 },
 // ---------------------------------------------------------- DAY 7
@@ -806,8 +810,8 @@ const BOOKINGS = {
       ["Data", "Lun 20 lug · 19:00–21:00"], ["Tavolo", "2 persone · sala interna (aria condizionata)"], ["Riferimento", "06485437"], ["Note", "Tavolo tenuto 15 min: avvisare in caso di ritardo"], ["Stato", "Prenotato ✓"] ] },
     { cat: "ristoranti", s: "🍽️", what: "Flower Bud (G8, cena ~19:45)", rows: [
       ["Quando", "2–3 giorni prima"], ["Come", "Sito flowerbudbalangan.com o WhatsApp"], ["Riserva", "Balangan Sea View (walk-in o tel. +62 858 5710 2667)"] ] },
-    { cat: "ristoranti", s: "🍽️", what: "Oliverra (G6, ~19:00; riserva WAATU)", rows: [
-      ["Quando", "2–3 giorni prima"], ["Come", "WhatsApp/Instagram"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Oliverra (G6, cena 19:00)", rows: [
+      ["Data", "Sab 25 lug · 19:00"], ["Tavolo", "2 persone"], ["Stato", "Prenotato ✓"] ] },
     { cat: "ristoranti", s: "🌅", what: "El Kabron (G9, se scelto)", rows: [
       ["Quando", "2–3 giorni prima"], ["Come", "Restaurant Area: sito \"Book Now\" o Chope. Sunset Theater: posto a pagamento. Non rimborsabile, +10%+10%"] ] },
 
@@ -860,8 +864,8 @@ const BOOKINGS = {
       ["Date", "Mon 20 Jul · 19:00–21:00"], ["Table", "2 guests · indoor dining (air-conditioned area)"], ["Reference", "06485437"], ["Note", "Table held 15 min: advise if running late"], ["Status", "Booked ✓"] ] },
     { cat: "ristoranti", s: "🍽️", what: "Flower Bud (D8, dinner ~19:45)", rows: [
       ["When", "2–3 days ahead"], ["How", "Site flowerbudbalangan.com or WhatsApp"], ["Backup", "Balangan Sea View (walk-in or tel. +62 858 5710 2667)"] ] },
-    { cat: "ristoranti", s: "🍽️", what: "Oliverra (D6, ~19:00; WAATU backup)", rows: [
-      ["When", "2–3 days ahead"], ["How", "WhatsApp/Instagram"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Oliverra (D6, dinner 19:00)", rows: [
+      ["Date", "Sat 25 Jul · 19:00"], ["Table", "2 guests"], ["Status", "Booked ✓"] ] },
     { cat: "ristoranti", s: "🌅", what: "El Kabron (D9, if chosen)", rows: [
       ["When", "2–3 days ahead"], ["How", "Restaurant Area: site \"Book Now\" or Chope. Sunset Theater: paid seating. Non-refundable, +10%+10%"] ] },
 
@@ -914,8 +918,8 @@ const BOOKINGS = {
       ["日期", "7月20日 周一 · 19:00–21:00"], ["座位", "2人 · 室内用餐区（空调）"], ["预订编号", "06485437"], ["备注", "座位保留15分钟：迟到请提前告知"], ["状态", "已预订 ✓"] ] },
     { cat: "ristoranti", s: "🍽️", what: "Flower Bud（第8天，晚餐约19:45）", rows: [
       ["时间", "提前2–3天"], ["方式", "官网 flowerbudbalangan.com 或 WhatsApp"], ["备选", "Balangan Sea View（可直接前往或致电 +62 858 5710 2667）"] ] },
-    { cat: "ristoranti", s: "🍽️", what: "Oliverra（第6天，约19:00；备选WAATU）", rows: [
-      ["时间", "提前2–3天"], ["方式", "WhatsApp/Instagram"] ] },
+    { cat: "ristoranti", s: "🍽️", what: "Oliverra（第6天，晚餐19:00）", rows: [
+      ["日期", "7月25日 周六 · 19:00"], ["座位", "2人"], ["状态", "已预订 ✓"] ] },
     { cat: "ristoranti", s: "🌅", what: "El Kabron（第9天，若选择）", rows: [
       ["时间", "提前2–3天"], ["方式", "餐厅区：官网\"Book Now\"或Chope。Sunset Theater：座位收费。不可退款，+10%+10%"] ] },
 

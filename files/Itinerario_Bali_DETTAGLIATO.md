@@ -129,17 +129,15 @@ Oggi cambiate villa, ma la mattinata è tutta locale e breve (Alas Harum e Tis C
 - **Trasferimento al Bukit** (~1h30–2h con autista).
 - **~15:00 — check-in a Nunamkhalu** (Ungasan).
 
-**Pomeriggio / sera — DA DECIDERE.** Idee parcheggiate per quando scegliete:
-- 🤿 **Snorkeling a Geger Beach** (Nusa Dua, ~15 min) — *piano B se a Padangbai è saltato*: baia calma, snorkeling **da riva senza barca** (attrezzatura ~IDR 50k, lettini, docce), si entra/esce quando si vuole. Cibo al **Geger Beach Cafe** o **Nusa Dua Beach Grill**.
-- 🏖️ Oppure **solo relax in spiaggia** (5–10 min):
-  - **Melasti** — sabbia bianca incastonata tra alte falesie calcaree (ci si arriva da una scenografica strada scavata nella roccia), acqua turchese e calma nelle insenature. Lettini/beach club, perfetta per bagno, sole e tramonto.
-  - **Pandawa** — ampia spiaggia con le statue dei Pandawa scolpite nella parete all'ingresso; acqua riparata e poco profonda, lettini/ombrelloni, kayak a noleggio e warung sulla sabbia. Più tranquilla e "familiare".
-  - In pratica: lettino, bagno, una passeggiata e un cocco/drink, senza programma — godetevi mare e falesie con calma.
-- 🍽️ **Cena (~19:00)**: **1ª scelta Oliverra** (mediterraneo, vicino a Melasti, romantico) · **2ª scelta WAATU** (su scogliera, elegante). *In alternativa più informale*: Ohana (italiano/pizza) · Artisan Ungasan (bistrot) · Ayu Seafood (gemma locale di pesce, ~10 min, andateci presto che finisce). **Prenotate Oliverra/WAATU in anticipo.**
+**Pomeriggio e sera (deciso)**
+- 🏖️ **~16:00 — Pandawa Beach** (navetta della villa inclusa, andata e ritorno): ampia spiaggia con le statue dei Pandawa scolpite nella parete all'ingresso; acqua riparata e poco profonda, lettini/ombrelloni, kayak a noleggio e warung sulla sabbia.
+- 🚿 **~18:00 — rientro in villa**, doccia.
+- 🍽️ **19:00 — CENA a Oliverra** (mediterraneo, vicino a Melasti, romantico). ✅ *Prenotato: tavolo per 2 alle 19:00 (25/7).* *Alternative*: WAATU (su scogliera, elegante; prenotare) · Ohana (italiano/pizza) · Artisan Ungasan (bistrot) · Ayu Seafood (pesce, ~10 min, andarci presto).
+- 🏖️ *Alternative spiaggia*: **Melasti** — sabbia bianca tra alte falesie calcaree (strada scenografica scavata nella roccia), acqua turchese e calma · **Geger Beach** (Nusa Dua, ~15 min) — *piano B se a Padangbai è saltato*: snorkeling da riva senza barca (attrezzatura ~IDR 50k), cibo al Geger Beach Cafe o Nusa Dua Beach Grill.
 
 > 🤿 Nota snorkeling: anche la caletta di **Sundays (G7)** offre snorkeling calmo da riva, quindi al sud è coperto. Se va tutto bene potete fare pure entrambe (Padangbai + Geger).
 
-**🚗 Trasporto oggi**: mattina a piedi (Taani) o Grab brevi; trasferimento al Bukit **autista** (bagagli in auto con lui); poi spostamenti = **Grab**.
+**🚗 Trasporto oggi**: mattina a piedi (Taani) o Grab brevi; trasferimento al Bukit **autista** (bagagli in auto con lui); Pandawa = **navetta della villa** inclusa; cena = **Grab** breve.
 
 ## **Giorno 7 — Dom 26 lug — Beach club calmo: Sundays** · *Nunamkhalu*
 - **~9:00 — Colazione in villa (inclusa)** a Nunamkhalu.
@@ -236,7 +234,7 @@ Ogni giornata ha **una sola cosa principale** + relax: se ne salta una, sposti l
 | 🍷 **Uma Garden** (G1, cena ~19:00) | Qualche giorno prima | WhatsApp/sito — chiedere tavolo in giardino |
 | 🌊 **Verifica maree** (G8 Suluban, G9 Tegal Wangi) | Qualche giorno prima, poi il giorno stesso | App maree (Tide Charts) o sundaysbeachclub.com/bali-tide-chart |
 | 🍽️ **Flower Bud** (G8, CENA ~19:45–20:00) | 2–3 giorni prima | Sito flowerbudbalangan.com o WhatsApp; riserva: Balangan Sea View (walk-in o tel.) |
-| 🍽️ **Oliverra** (G6, ~19:00; riserva WAATU) | 2–3 giorni prima | WhatsApp/Instagram |
+| 🍽️ **Oliverra** (G6, cena 19:00) | ✅ *Fatto* | Tavolo per 2 alle 19:00 (25/7) |
 | 🌅 **El Kabron** (G9, *se scelto*) | 2–3 giorni prima | Restaurant Area = tavolo normale (sito "Book Now" o Chope); Sunset Theater = posto a pagamento. Non rimborsabile, +10% servizio +10% tasse |
 | ✈️ **Transfer aeroporto** (G1 arrivo, G10 partenza) | Prima della partenza | Villa o servizio transfer |
 | 🚗 **Autista fidato** | Dal G2, poi tenerlo su WhatsApp | Tramite la villa o recensioni |

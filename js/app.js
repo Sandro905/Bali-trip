@@ -180,6 +180,7 @@
       <div class="callout notes">
         <h3>📌 ${esc(t().notes)}</h3>
         <ul>${d.notes[lang].map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+        ${(d.notesPlaces || []).length ? `<div class="maplinks">${d.notesPlaces.map((p) => `<a class="maplink" href="${p[1]}" target="_blank" rel="noopener" title="${esc(p[0])}">📍 <span class="mn">${esc(p[0])}</span></a>`).join("")}</div>` : ""}
       </div>` : ""}
 
       <div class="callout transport">
