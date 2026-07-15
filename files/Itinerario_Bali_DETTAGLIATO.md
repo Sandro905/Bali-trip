@@ -244,9 +244,9 @@ Ogni giornata ha **una sola cosa principale** + relax: se ne salta una, sposti l
 
 ## 🛂 Burocrazia d'arrivo (da fare PRIMA di partire)
 
-- [ ] **e-VOA (visto on arrival elettronico)** — si compila e paga online su molina.imigrasi.go.id qualche giorno prima: all'arrivo saltate la coda del visto. (~IDR 500k a testa, valido 30 giorni.)
-- [ ] **e-CD (dichiarazione doganale elettronica)** — da compilare online nelle 72h prima dell'arrivo; si riceve un QR da mostrare in dogana.
-- [ ] **Tassa turistica di Bali** — ~IDR 150k a testa, si paga online sul portale Love Bali (QR da conservare).
+- [ ] **e-VOA (visto on arrival elettronico)** — si compila e paga online su molina.imigrasi.go.id qualche giorno prima: all'arrivo saltate la coda del visto. (~IDR 500k a testa, valido 30 giorni.) All'immigrazione tenete a portata anche il volo di ritorno (chi entra con VOA/e-VOA può vederselo chiedere come prova di uscita).
+- [ ] **All Indonesia Arrival Card** — da settembre 2025 unisce dogana (ex e-CD) e dichiarazione sanitaria in **un unico modulo obbligatorio**. Si compila **solo nelle 72h prima dell'arrivo** (per voi: dal 17 luglio, ideale dopo il check-in online), una card + QR **a testa** (potete compilarla l'uno per l'altra). **Gratis**, SOLO sul portale ufficiale **allindonesia.imigrasi.go.id** (o app All Indonesia) — verificate che il sito finisca in *imigrasi.go.id*: ci sono siti-copia che fanno pagare un modulo gratuito. Il QR arriva via email → **screenshot offline + stampa** (il Wi-Fi dell'aeroporto è inaffidabile).
+- [ ] **Tassa turistica di Bali** — ~IDR 150k a testa, si paga online sul portale Love Bali (QR da conservare). **Resta separata** dall'Arrival Card: il QR della card non la sostituisce.
 - [ ] **Passaporti** — validi almeno 6 mesi dalla data di ingresso, con pagine libere.
 - [ ] **eSIM** comprata/installata prima di partire (es. Telkomsel/Airalo), da attivare all'atterraggio.
 - [ ] Copie digitali di passaporti, prenotazioni e voli (su telefono + cloud).
@@ -293,7 +293,7 @@ Ogni giornata ha **una sola cosa principale** + relax: se ne salta una, sposti l
 **Tecnologia & documenti**
 - [ ] **eSIM installata** prima di partire + power bank (giornate lunghe fuori, Grab consuma)
 - [ ] Adattatore prese **tipo C/F** (spine europee: di solito compatibili, ma un adattatore universale non fa mai male)
-- [ ] Passaporti (6+ mesi validità) + **QR salvati offline**: e-VOA, e-CD, Love Bali, voucher Lagonara
+- [ ] Passaporti (6+ mesi validità) + **QR salvati offline**: e-VOA, Arrival Card, Love Bali, voucher Lagonara
 - [ ] Contanti in € da cambiare o carta per ATM (prelevate da banche note)
 
 💡 *Compratelo lì, non portatelo*: pareo di scorta, infradito da spiaggia, souvenir — al mercato di Ubud costa tutto poco (e si contratta).
