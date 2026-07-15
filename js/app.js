@@ -251,10 +251,24 @@
         <h3>${icon} ${esc(title)}</h3>
         <ul class="plainlist">${arr.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
       </div>`;
+    const checkBlock = (title, icon, arr, prefix) => `
+      <div class="infogroup">
+        <h3>${icon} ${esc(title)}</h3>
+        <div class="checklist">
+          ${arr.map((x, i) => {
+            const key = `${prefix}_${i}`;
+            const done = localStorage.getItem(key) === "1";
+            return `<label class="${done ? "done" : ""}">
+              <input type="checkbox" data-key="${key}" ${done ? "checked" : ""}>
+              <span>${esc(x)}</span>
+            </label>`;
+          }).join("")}
+        </div>
+      </div>`;
     return `
     <div class="wrap">
       <div class="hero"><h1>ℹ️ <span class="accent">${esc(t().info)}</span></h1></div>
-      ${block(t().bureaucracy, "🛂", inf.bureaucracy)}
+      ${checkBlock(t().bureaucracy, "🛂", inf.bureaucracy, "bur")}
       ${block(t().health, "🏥", inf.health)}
       ${block(t().driverGuide, "🚗", inf.driver)}
       ${block(t().practical, "📌", inf.practical)}

@@ -1,5 +1,5 @@
 // Simple offline cache for GitHub Pages — cache-first with network refresh.
-const CACHE = "bali2026-v16";
+const CACHE = "bali2026-v17";
 const CORE = [
   "./",
   "./index.html",

@@ -575,7 +575,7 @@ const PACKING = {
     { h: "Tecnologia & documenti", items: [
       "eSIM installata prima di partire + power bank",
       "Adattatore prese universale (spine tipo C/F)",
-      "Passaporti (6+ mesi validità) + QR salvati offline: e-VOA, e-CD, Love Bali, voucher Lagonara",
+      "Passaporti (6+ mesi validità) + QR salvati offline: e-VOA, Arrival Card, Love Bali, voucher Lagonara",
       "Contanti in € da cambiare o carta per ATM (banche note)",
     ]},
     { h: "💡 Comprare lì, non portare", items: [
@@ -609,7 +609,7 @@ const PACKING = {
     { h: "Tech & documents", items: [
       "eSIM installed before departure + power bank",
       "Universal plug adapter (type C/F sockets)",
-      "Passports (6+ months validity) + QR codes saved offline: e-VOA, e-CD, Love Bali, Lagonara voucher",
+      "Passports (6+ months validity) + QR codes saved offline: e-VOA, Arrival Card, Love Bali, Lagonara voucher",
       "Cash to exchange or card for ATMs (major banks)",
     ]},
     { h: "💡 Buy there, don't pack", items: [
@@ -643,7 +643,7 @@ const PACKING = {
     { h: "电子与证件", items: [
       "出发前装好eSIM + 充电宝",
       "万能转换插头（C/F型插座）",
-      "护照（有效期6个月以上）+ 离线保存二维码：e-VOA、e-CD、Love Bali、Lagonara凭证",
+      "护照（有效期6个月以上）+ 离线保存二维码：e-VOA、入境卡、Love Bali、Lagonara凭证",
       "备兑换现金或银行卡（选大银行ATM取现）",
     ]},
     { h: "💡 当地买，不用带", items: [
@@ -658,9 +658,9 @@ const PACKING = {
 const INFO = {
   it: {
     bureaucracy: [
-      "e-VOA (visto on arrival elettronico) — compilare e pagare online su molina.imigrasi.go.id qualche giorno prima: all'arrivo si salta la coda del visto (~IDR 500k a testa, 30 giorni).",
-      "e-CD (dichiarazione doganale elettronica) — da compilare online nelle 72h prima dell'arrivo; QR da mostrare in dogana.",
-      "Tassa turistica di Bali — ~IDR 150k a testa, online sul portale Love Bali (conservare il QR).",
+      "e-VOA (visto on arrival elettronico) — compilare e pagare online su molina.imigrasi.go.id qualche giorno prima: all'arrivo si salta la coda del visto (~IDR 500k a testa, 30 giorni). All'immigrazione tenere a portata anche il volo di ritorno.",
+      "All Indonesia Arrival Card — da set. 2025 unisce dogana (ex e-CD) e dichiarazione sanitaria in un unico modulo obbligatorio. Compilabile SOLO nelle 72h prima dell'arrivo (per voi: dal 17 luglio), una card + QR a testa. GRATIS, solo su allindonesia.imigrasi.go.id (o app All Indonesia) — occhio ai siti-copia a pagamento. QR via email: screenshot offline + stampa.",
+      "Tassa turistica di Bali — ~IDR 150k a testa, online sul portale Love Bali (conservare il QR). Resta separata dall'Arrival Card: il QR della card non la sostituisce.",
       "Passaporti validi almeno 6 mesi dall'ingresso, con pagine libere.",
       "eSIM comprata/installata prima di partire (es. Telkomsel/Airalo), da attivare all'atterraggio.",
       "Copie digitali di passaporti, prenotazioni e voli (telefono + cloud).",
@@ -688,9 +688,9 @@ const INFO = {
   },
   en: {
     bureaucracy: [
-      "e-VOA (electronic visa on arrival) — fill in and pay online at molina.imigrasi.go.id a few days ahead: skip the visa queue on arrival (~IDR 500k each, 30 days).",
-      "e-CD (electronic customs declaration) — to be filled online within 72h of arrival; QR shown at customs.",
-      "Bali tourist levy — ~IDR 150k each, online on the Love Bali portal (keep the QR).",
+      "e-VOA (electronic visa on arrival) — fill in and pay online at molina.imigrasi.go.id a few days ahead: skip the visa queue on arrival (~IDR 500k each, 30 days). Keep the return flight handy at immigration.",
+      "All Indonesia Arrival Card — since Sept 2025 it merges customs (former e-CD) and the health declaration into one mandatory form. Can ONLY be filled within 72h of arrival (for you: from 17 July), one card + QR per person. FREE, only at allindonesia.imigrasi.go.id (or the All Indonesia app) — beware of paid copycat sites. QR arrives by email: offline screenshot + print.",
+      "Bali tourist levy — ~IDR 150k each, online on the Love Bali portal (keep the QR). Stays separate from the Arrival Card: the card's QR does not replace it.",
       "Passports valid 6+ months from entry, with free pages.",
       "eSIM bought/installed before departure (e.g. Telkomsel/Airalo), activated on landing.",
       "Digital copies of passports, bookings and flights (phone + cloud).",
@@ -718,9 +718,9 @@ const INFO = {
   },
   zh: {
     bureaucracy: [
-      "e-VOA电子落地签——出发前几天在 molina.imigrasi.go.id 在线填写并付款：抵达后免排签证队（约每人50万印尼盾，30天有效）。",
-      "e-CD电子海关申报——抵达前72小时内在线填写；过关时出示二维码。",
-      "巴厘岛旅游税——约每人15万印尼盾，在Love Bali官网在线缴纳（保存二维码）。",
+      "e-VOA电子落地签——出发前几天在 molina.imigrasi.go.id 在线填写并付款：抵达后免排签证队（约每人50万印尼盾，30天有效）。过移民关时备好回程机票。",
+      "All Indonesia入境卡——2025年9月起将海关申报（原e-CD）和健康申报合并为一份必填表格。只能在抵达前72小时内填写（你们：7月17日起），每人一份卡+二维码。免费，仅限官网 allindonesia.imigrasi.go.id（或All Indonesia应用）——当心收费的山寨网站。二维码通过邮件发送：离线截图+打印。",
+      "巴厘岛旅游税——约每人15万印尼盾，在Love Bali官网在线缴纳（保存二维码）。与入境卡分开：入境卡二维码不能替代它。",
       "护照自入境起有效期需6个月以上，且有空白页。",
       "出发前购买/安装eSIM（如Telkomsel/Airalo），落地激活。",
       "护照、预订和机票的电子备份（手机+云端）。",
